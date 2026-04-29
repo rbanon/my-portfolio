@@ -1,0 +1,94 @@
+{
+  "about": {
+    "bio": "Rafael es un desarrollador frontend con varios años de experiencia creando interfaces modernas, rápidas y agradables. Trabaja a diario con HTML5, CSS3, TypeScript y frameworks como Vue y Angular. Valora el código limpio y bien estructurado, así como el equilibrio entre rendimiento y diseño. También tiene experiencia con Node.js, Python y MySQL, y posee certificaciones en Google Cloud Digital Leader y Microsoft Azure AZ-900. Anteriormente trabajó como técnico audiovisual (gestión de señales de video/audio, streaming, edición de video) de 2018 a 2021.",
+    "title": "Sobre mí"
+  },
+  "contact": {
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "location": "Ubicación",
+    "message": "¿Tienes un proyecto en mente o simplemente quieres saludar? No dudes en contactarme.",
+    "phone": "Teléfono",
+    "title": "Contacto"
+  },
+  "experience": {
+    "audiovisual": {
+      "company": "Varios empleadores",
+      "period": "Ene 2018 – Dic 2021",
+      "role": "Técnico Audiovisual",
+      "tasks": [
+        "Gestión técnica de señales de video/audio para streaming",
+        "Grabación de contenido y edición de video (postproducción)"
+      ]
+    },
+    "capgemini": {
+      "company": "Capgemini S.L.",
+      "period": "Sep 2022 – Actualidad",
+      "role": "Desarrollador de Software",
+      "tasks": [
+        "Integración de APIs RESTful y servicios de terceros en aplicaciones frontend",
+        "Optimización del rendimiento web (velocidad de carga, UX)",
+        "Diseño y desarrollo de nuevas funcionalidades",
+        "Evaluación de software, depuración y mejora del rendimiento",
+        "Ejecución de planes de pruebas unitarias, funcionales y no funcionales",
+        "Mantenimiento evolutivo y correctivo de sistemas existentes",
+        "Desarrollo alineado con especificaciones técnicas y mejores prácticas"
+      ]
+    },
+    "sagitaz": {
+      "company": "Sagitaz Valencia",
+      "period": "Feb 2022 – May 2022",
+      "role": "Desarrollador Web",
+      "tasks": [
+        "Desarrollo de aplicaciones web basadas en Zoho Suite",
+        "Creación de chatbots",
+        "Trabajo en diferentes contextos de bases de datos, backend y frontend",
+        "Mantenimiento y optimización de bases de datos MySQL y MongoDB"
+      ]
+    },
+    "title": "Experiencia"
+  },
+  "hero": {
+    "getInTouch": "Contactar",
+    "subtitle": "Desarrollador de Software — Frontend",
+    "tagline": "Construyendo interfaces web rápidas, limpias y modernas.",
+    "title": "Rafael Bañón Martín",
+    "viewWork": "Ver mi trabajo"
+  },
+  "navbar": {
+    "about": "Sobre mí",
+    "contact": "Contacto",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades"
+  },
+  "projects": {
+    "comingSoon": "Próximamente",
+    "githubDashboard": {
+      "description": "Una aplicación de página única construida con Vue 3 + TypeScript que permite buscar cualquier usuario de GitHub y muestra un panel de perfil completo: repositorios, lenguajes más utilizados (gráfico de dona), actividad reciente y estadísticas.",
+      "github": "Ver en GitHub",
+      "live": "Demo en vivo",
+      "name": "GitHub Dashboard",
+      "tech": "Vue 3, TypeScript, Axios, Chart.js, SCSS, GitHub REST API"
+    },
+    "portfolio": {
+      "description": "El portfolio que estás viendo. Construido con Angular + TypeScript, con modo oscuro/claro, i18n EN/ES, scroll suave y diseño responsivo.",
+      "github": "Ver en GitHub",
+      "live": "Demo en vivo",
+      "name": "Portfolio Personal",
+      "tech": "Angular, TypeScript, SCSS, @angular/localize"
+    },
+    "title": "Proyectos"
+  },
+  "skills": {
+    "backend": "Backend y Base de Datos",
+    "cloud": "Cloud e IA",
+    "frontend": "Frameworks Frontend",
+    "languages": "Lenguajes",
+    "soft": "Habilidades Blandas",
+    "styling": "Estilos",
+    "title": "Habilidades",
+    "tools": "Herramientas"
+  }
+}

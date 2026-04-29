@@ -1,0 +1,35 @@
+<section class="hero" id="hero">
+  <div class="container hero__container">
+    <!-- Skeleton Loading State -->
+    <div class="hero__skeleton" *ngIf="isLoading">
+      <div class="hero__skeleton-title"></div>
+      <div class="hero__skeleton-subtitle"></div>
+      <div class="hero__skeleton-tagline"></div>
+      <div class="hero__skeleton-buttons">
+        <div class="hero__skeleton-button"></div>
+        <div class="hero__skeleton-button"></div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="hero__content" *ngIf="!isLoading">
+      <div>
+        <img src="assets/svg/rb-logo-white.svg" alt="Rafael Bañon" style="height: 25%; width: 25%; object-fit: cover;"/>
+      </div>
+      <h1 class="hero__title" i18n>Rafael Bañón Martín</h1>
+      <p class="hero__subtitle" i18n>Software Developer — Frontend</p>
+      <p class="hero__tagline" i18n>Building fast, clean and modern interfaces, improving product experiences and collaborating across the stack.</p>
+      <!-- <div class="hero__buttons">
+        <button class="hero__button hero__button--primary" (click)="scrollToProjects()" i18n>
+          View my work
+        </button>
+        <button class="hero__button hero__button--secondary" (click)="scrollToContact()" i18n>
+          Get in touch
+        </button>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- Animated Background -->
+  <div class="hero__background"></div>
+</section>

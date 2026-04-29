@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Projects/**)",
+      "Bash(ng new *)",
+      "Bash(npm *)",
+      "Bash(ng build *)",
+      "Bash(ng serve *)"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+<app-navbar (tabChange)="onTabChange($event)"></app-navbar>
+
+<main>
+  <app-hero *ngIf="activeTab === 'hero'"></app-hero>
+  <app-experience *ngIf="activeTab === 'experience'"></app-experience>
+  <app-skills *ngIf="activeTab === 'skills'"></app-skills>
+  <app-projects *ngIf="activeTab === 'projects'"></app-projects>
+  <app-about *ngIf="activeTab === 'about'"></app-about>
+  <app-contact *ngIf="activeTab === 'contact'"></app-contact>
+</main>
+
+<app-footer></app-footer>

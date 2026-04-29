@@ -1,0 +1,81 @@
+<nav class="navbar">
+  <div class="container navbar__container">
+    <!-- Logo -->
+    <a href="#" class="navbar__logo">
+      <img src="assets/svg/rb-logo-white.svg" alt="Rafael Bañon" class="navbar__logo-image" />
+    </a>
+
+    <!-- Desktop Navigation Tabs -->
+    <ul class="navbar__tabs">
+      <li *ngFor="let tab of tabs">
+        <button
+          class="navbar__tab"
+          [class.active]="activeTab === tab.id"
+          (click)="switchTab(tab.id)"
+        >
+          {{ tab.label }}
+        </button>
+      </li>
+    </ul>
+
+    <!-- Controls -->
+    <div class="navbar__controls">
+      <!-- Language Toggle -->
+      <div class="navbar__lang-toggle">
+        <button
+          class="navbar__lang-btn"
+          [class.active]="currentLang === 'en'"
+          (click)="setLanguage('en')"
+          aria-label="Switch to English"
+        >
+          EN
+        </button>
+        <span class="navbar__lang-separator">|</span>
+        <button
+          disabled
+          class="navbar__lang-btn"
+          [class.active]="currentLang === 'es'"
+          (click)="setLanguage('es')"
+          aria-label="Cambiar a español"   
+        >
+          ES
+        </button>
+      </div>
+
+      <!-- Theme Toggle -->
+      <button
+        disabled
+        alt="Coming soon"
+        class="navbar__theme-toggle"
+        (click)="toggleTheme()"
+        [attr.aria-label]="currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+        [innerHTML]="getThemeIcon()"
+      ></button>
+
+      <!-- Mobile Menu Toggle -->
+      <button
+        class="navbar__menu-toggle"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="isMenuOpen"
+        aria-label="Toggle menu"
+      >
+        <span class="navbar__menu-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="navbar__mobile-menu" [class.open]="isMenuOpen">
+    <ul class="navbar__mobile-links">
+      <li *ngFor="let tab of tabs">
+        <button
+          class="navbar__mobile-link"
+          [class.active]="activeTab === tab.id"
+          (click)="switchTab(tab.id); closeMenu()"
+        >
+          {{ tab.label }}
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
