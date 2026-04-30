@@ -1,3 +1,19 @@
+$card-bg: linear-gradient(
+  180deg,
+  color-mix(in srgb, var(--bg-secondary) 94%, white 6%) 0%,
+  var(--bg-secondary) 100%
+);
+
+$card-bg-primary: linear-gradient(
+  180deg,
+  color-mix(in srgb, var(--accent) 8%, var(--bg-secondary)) 0%,
+  var(--bg-secondary) 100%
+);
+
+$card-border: color-mix(in srgb, var(--border-color) 72%, transparent);
+$badge-bg: color-mix(in srgb, var(--accent) 14%, var(--bg-primary));
+$badge-border: color-mix(in srgb, var(--accent) 30%, var(--border-color));
+
 :host {
   display: block;
 }
@@ -25,7 +41,7 @@
 
 .about__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 1.5rem;
   max-width: 1120px;
   margin: 0 auto;
@@ -40,19 +56,11 @@
   min-height: 100%;
   padding: 1.5rem;
   overflow: hidden;
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--bg-secondary) 94%, white 6%) 0%,
-      var(--bg-secondary) 100%
-    );
-  border: 1px solid color-mix(in srgb, var(--border-color) 72%, transparent);
+  background: $card-bg;
+  border: 1px solid $card-border;
   border-radius: 1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 
   &::before {
     content: '';
@@ -82,16 +90,11 @@
       color: var(--accent);
     }
   }
-}
 
-.about__card--primary {
-  border-color: color-mix(in srgb, var(--accent) 30%, var(--border-color));
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--accent) 8%, var(--bg-secondary)) 0%,
-      var(--bg-secondary) 100%
-    );
+  &--primary {
+    border-color: color-mix(in srgb, var(--accent) 30%, var(--border-color));
+    background: $card-bg-primary;
+  }
 }
 
 .about__card-header {
@@ -118,9 +121,9 @@
   align-items: center;
   padding: 0.35rem 0.65rem;
   border-radius: 999px;
-  background-color: color-mix(in srgb, var(--accent) 14%, var(--bg-primary));
+  background-color: $badge-bg;
   color: var(--accent);
-  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border-color));
+  border: 1px solid $badge-border;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -134,22 +137,16 @@
   justify-content: center;
 }
 
-.about__avatar {
-  width: 8.5rem;
-  height: 8.5rem;
-  border-radius: 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+.about__profile-media {
+  width: 100%;
+  max-width: 9rem;
+  aspect-ratio: 1;
 }
 
-.about__avatar-initials {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: white;
-  letter-spacing: 0.03em;
+.about__profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about__bio {
@@ -182,10 +179,7 @@
   border-radius: 0.875rem;
   background-color: color-mix(in srgb, var(--bg-tertiary) 88%, white 12%);
   border: 1px solid color-mix(in srgb, var(--border-color) 75%, transparent);
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    background-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 
   &:hover {
     transform: translateY(-1px);
@@ -235,9 +229,9 @@
   .about__card--primary {
     grid-column: span 2;
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: minmax(150px, 190px) 1fr;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 
   .about__profile {
@@ -276,13 +270,8 @@
     font-size: 0.6875rem;
   }
 
-  .about__avatar {
-    width: 7.5rem;
-    height: 7.5rem;
-  }
-
-  .about__avatar-initials {
-    font-size: 2rem;
+  .about__profile-media {
+    max-width: 8rem;
   }
 
   .about__bio p {

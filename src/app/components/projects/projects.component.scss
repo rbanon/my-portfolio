@@ -1,3 +1,7 @@
+$accent-mix-mid: color-mix(in srgb, var(--accent) 14%, var(--bg-primary));
+$accent-mix-border: color-mix(in srgb, var(--accent) 30%, var(--border-color));
+$card-bg: linear-gradient(180deg, color-mix(in srgb, var(--bg-secondary) 94%, white 6%) 0%, var(--bg-secondary) 100%);
+
 :host {
   display: block;
 }
@@ -6,10 +10,6 @@
   max-width: 760px;
   margin: 0 auto 2.5rem;
   text-align: center;
-  .projects__skeleton,
-  .projects__grid {
-    margin-top: 0; 
-  }
 }
 
 .section-eyebrow {
@@ -29,109 +29,21 @@
 
 .section-description {
   margin: 0.875rem auto 0;
-  max-width: 62ch;
+  max-width: min(62ch, 100%);
   color: var(--text-secondary);
   line-height: 1.7;
 }
 
-.projects__skeleton {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
-}
-
-.projects__skeleton-card {
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--bg-secondary) 94%, white 6%) 0%,
-      var(--bg-secondary) 100%
-    );
-  border: 1px solid color-mix(in srgb, var(--border-color) 75%, transparent);
-  border-radius: 1rem;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  min-height: 14rem;
-}
-
-.projects__skeleton-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-}
-
-.projects__skeleton-title {
-  height: 1.4rem;
-  width: 75%;
-  border-radius: 0.375rem;
-  animation: shimmer 1.8s ease-in-out infinite;
-}
-
-.projects__skeleton-badge {
-  height: 1.4rem;
-  width: 3.5rem;
-  border-radius: 999px;
-  animation: shimmer 1.8s ease-in-out infinite;
-}
-
-.projects__skeleton-description {
-  height: 3rem;
-  width: 95%;
-  border-radius: 0.375rem;
-  animation: shimmer 1.8s ease-in-out infinite;
-}
-
-.projects__skeleton-tech {
-  height: 1.4rem;
-  width: 85%;
-  border-radius: 0.375rem;
-  animation: shimmer 1.8s ease-in-out infinite;
-}
-
-.projects__skeleton-links {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: auto;
-}
-
-.projects__skeleton-link {
-  flex: 1;
-  height: 2.25rem;
-  border-radius: 0.5rem;
-  animation: shimmer 1.8s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: 200% 0;
-    background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--bg-secondary) 50%, var(--bg-tertiary) 75%);
-    background-size: 200% 100%;
-  }
-  100% {
-    background-position: -200% 0;
-    background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--bg-secondary) 50%, var(--bg-tertiary) 75%);
-    background-size: 200% 100%;
-  }
-}
-
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 1.5rem;
 }
 
 .projects__card {
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--bg-secondary) 94%, white 6%) 0%,
-      var(--bg-secondary) 100%
-    );
+  background: $card-bg;
   border: 1px solid color-mix(in srgb, var(--border-color) 75%, transparent);
   border-radius: 1rem;
   padding: 1.75rem;
@@ -139,10 +51,7 @@
   flex-direction: column;
   min-height: 15rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 
   &::before {
     content: '';
@@ -150,11 +59,7 @@
     inset: 0;
     border-radius: inherit;
     pointer-events: none;
-    background: linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--accent) 10%, transparent) 0%,
-      transparent 50%
-    );
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, transparent) 0%, transparent 50%);
     opacity: 0;
     transition: opacity 0.25s ease;
   }
@@ -164,13 +69,8 @@
     border-color: color-mix(in srgb, var(--accent) 50%, var(--border-color));
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
 
-    &::before {
-      opacity: 1;
-    }
-
-    .projects__card-title {
-      color: var(--accent);
-    }
+    &::before { opacity: 1; }
+    .projects__card-title { color: var(--accent); }
   }
 
   &--coming-soon {
@@ -209,9 +109,9 @@
   flex-shrink: 0;
   padding: 0.35rem 0.65rem;
   border-radius: 999px;
-  background-color: color-mix(in srgb, var(--accent) 14%, var(--bg-primary));
+  background-color: $accent-mix-mid;
   color: var(--accent);
-  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border-color));
+  border: 1px solid $accent-mix-border;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -247,6 +147,7 @@
 
 .projects__card-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: auto;
 }
@@ -265,9 +166,7 @@
   color: var(--text-primary);
   border: 1px solid var(--border-color);
 
-  svg {
-    flex-shrink: 0;
-  }
+  svg { flex-shrink: 0; }
 
   &:hover {
     border-color: var(--accent);
@@ -281,6 +180,7 @@
 
     &:hover {
       background-color: color-mix(in srgb, var(--accent) 85%, var(--accent-hover));
+      color: white;
     }
   }
 }
@@ -296,7 +196,6 @@
 .projects__coming-soon-circle {
   width: 3.5rem;
   height: 3.5rem;
-  padding: 0.5rem;
   border-radius: 50%;
   background-color: color-mix(in srgb, var(--accent) 12%, var(--bg-tertiary));
   display: flex;
@@ -326,10 +225,8 @@
   opacity: 0.8;
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
-  .projects__grid,
-  .projects__skeleton {
+  .projects__grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
@@ -337,10 +234,7 @@
   .projects__card {
     min-height: 14rem;
     padding: 1.5rem;
-
-    &:hover {
-      transform: translateY(-3px);
-    }
+    &:hover { transform: translateY(-3px); }
   }
 
   .projects__card-links {
@@ -349,5 +243,6 @@
 
   .projects__card-link {
     width: 100%;
+    justify-content: center;
   }
 }

@@ -1,3 +1,13 @@
+$card-bg: linear-gradient(
+  180deg,
+  color-mix(in srgb, var(--bg-secondary) 94%, white 6%) 0%,
+  var(--bg-secondary) 100%
+);
+
+$card-border: color-mix(in srgb, var(--border-color) 72%, transparent);
+$badge-bg: color-mix(in srgb, var(--accent) 14%, var(--bg-primary));
+$badge-border: color-mix(in srgb, var(--accent) 30%, var(--border-color));
+
 :host {
   display: block;
 }
@@ -25,14 +35,14 @@
 
 .section-description {
   margin: 0.875rem auto 0;
-  max-width: 62ch;
+  max-width: min(62ch, 100%);
   color: var(--text-secondary);
   line-height: 1.7;
 }
 
 .contact__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 1.5rem;
   max-width: 1120px;
   margin: 0 auto;
@@ -48,20 +58,11 @@
   padding: 1.5rem;
   overflow: hidden;
   text-decoration: none;
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--bg-secondary) 94%, white 6%) 0%,
-      var(--bg-secondary) 100%
-    );
-  border: 1px solid color-mix(in srgb, var(--border-color) 72%, transparent);
+  background: $card-bg;
+  border: 1px solid $card-border;
   border-radius: 1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease,
-    background-color 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 
   &::before {
     content: '';
@@ -134,9 +135,9 @@
   align-items: center;
   padding: 0.35rem 0.65rem;
   border-radius: 999px;
-  background-color: color-mix(in srgb, var(--accent) 14%, var(--bg-primary));
+  background-color: $badge-bg;
   color: var(--accent);
-  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border-color));
+  border: 1px solid $badge-border;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.03em;
