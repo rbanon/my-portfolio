@@ -2,6 +2,11 @@
   display: block;
 }
 
+// Variables locales reutilizadas
+$accent-mix-low: color-mix(in srgb, var(--accent) 8%, var(--bg-secondary));
+$accent-mix-mid: color-mix(in srgb, var(--accent) 14%, var(--bg-primary));
+$accent-mix-border: color-mix(in srgb, var(--accent) 30%, var(--border-color));
+
 .section-heading {
   max-width: 760px;
   margin: 0 auto 2.5rem;
@@ -15,7 +20,7 @@
   margin-bottom: 0.875rem;
   border: 1px solid color-mix(in srgb, var(--accent) 20%, var(--border-color));
   border-radius: 999px;
-  background-color: color-mix(in srgb, var(--accent) 8%, var(--bg-secondary));
+  background-color: $accent-mix-low;
   color: var(--accent);
   font-size: 0.8rem;
   font-weight: 600;
@@ -25,16 +30,15 @@
 
 .section-description {
   margin: 0.875rem auto 0;
-  max-width: 62ch;
+  max-width: min(62ch, 100%);
   color: var(--text-secondary);
   line-height: 1.7;
 }
 
 .skills__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 1.5rem;
-  max-width: 1120px;
   margin: 0 auto;
   align-items: stretch;
 }
@@ -44,22 +48,13 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  min-height: 100%;
   padding: 1.5rem;
   overflow: hidden;
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--bg-secondary) 94%, white 6%) 0%,
-      var(--bg-secondary) 100%
-    );
+  background: linear-gradient(180deg, color-mix(in srgb, var(--bg-secondary) 94%, white 6%) 0%, var(--bg-secondary) 100%);
   border: 1px solid color-mix(in srgb, var(--border-color) 72%, transparent);
   border-radius: 1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 
   &::before {
     content: '';
@@ -67,11 +62,7 @@
     inset: 0;
     border-radius: inherit;
     pointer-events: none;
-    background: linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--accent) 12%, transparent) 0%,
-      transparent 45%
-    );
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 12%, transparent) 0%, transparent 45%);
     opacity: 0;
     transition: opacity 0.25s ease;
   }
@@ -81,29 +72,17 @@
     border-color: color-mix(in srgb, var(--accent) 50%, var(--border-color));
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 
-    &::before {
-      opacity: 1;
-    }
+    &::before { opacity: 1; }
+    .skills__category-title { color: var(--accent); }
+  }
 
-    .skills__category-title {
-      color: var(--accent);
-    }
+  &--primary {
+    border-color: $accent-mix-border;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 8%, var(--bg-secondary)) 0%, var(--bg-secondary) 100%);
   }
 }
 
-.skills__category--primary {
-  border-color: color-mix(in srgb, var(--accent) 30%, var(--border-color));
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--accent) 8%, var(--bg-secondary)) 0%,
-      var(--bg-secondary) 100%
-    );
-}
-
 .skills__category-header {
-  position: relative;
-  z-index: 1;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -125,24 +104,22 @@
   align-items: center;
   padding: 0.35rem 0.65rem;
   border-radius: 999px;
-  background-color: color-mix(in srgb, var(--accent) 14%, var(--bg-primary));
+  background-color: $accent-mix-mid;
   color: var(--accent);
-  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border-color));
+  border: 1px solid $accent-mix-border;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-}
 
-.skills__category-badge--muted {
-  background-color: var(--bg-tertiary);
-  color: var(--text-secondary);
-  border-color: color-mix(in srgb, var(--border-color) 85%, transparent);
+  &--muted {
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border-color: color-mix(in srgb, var(--border-color) 85%, transparent);
+  }
 }
 
 .skills__category-description {
-  position: relative;
-  z-index: 1;
   margin: -0.25rem 0 0;
   color: var(--text-secondary);
   font-size: 0.93rem;
@@ -150,8 +127,6 @@
 }
 
 .skills__tags {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 0.625rem;
@@ -163,19 +138,15 @@
   justify-content: center;
   padding: 0.52rem 0.85rem;
   border-radius: 999px;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
   border: 1px solid color-mix(in srgb, var(--border-color) 75%, transparent);
   background-color: color-mix(in srgb, var(--bg-tertiary) 90%, white 10%);
   color: var(--text-secondary);
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1;
-  transition:
-    transform 0.2s ease,
-    color 0.2s ease,
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-1px);
@@ -184,23 +155,18 @@
     border-color: color-mix(in srgb, var(--accent) 42%, var(--border-color));
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   }
-}
 
-.skills__tag--featured {
-  color: var(--accent);
-  font-weight: 600;
-  background-color: color-mix(in srgb, var(--accent) 14%, var(--bg-primary));
-  border-color: color-mix(in srgb, var(--accent) 34%, var(--border-color));
+  &--featured {
+    color: var(--accent);
+    font-weight: 600;
+    background-color: $accent-mix-mid;
+    border-color: color-mix(in srgb, var(--accent) 34%, var(--border-color));
+  }
 }
 
 @media (max-width: 768px) {
-  .section-heading {
-    margin-bottom: 2rem;
-  }
-
-  .section-description {
-    font-size: 0.95rem;
-  }
+  .section-heading { margin-bottom: 2rem; }
+  .section-description { font-size: 0.95rem; }
 
   .skills__grid {
     grid-template-columns: 1fr;
@@ -210,27 +176,12 @@
   .skills__category {
     padding: 1.25rem;
     border-radius: 0.875rem;
-
-    &:hover {
-      transform: translateY(-2px);
-    }
+    &:hover { transform: translateY(-2px); }
   }
 
-  .skills__category-header {
-    align-items: flex-start;
-  }
-
-  .skills__category-title {
-    font-size: 1rem;
-  }
-
-  .skills__category-badge {
-    font-size: 0.6875rem;
-  }
-
-  .skills__category-description {
-    font-size: 0.89rem;
-  }
+  .skills__category-title { font-size: 1rem; }
+  .skills__category-badge { font-size: 0.6875rem; }
+  .skills__category-description { font-size: 0.89rem; }
 
   .skills__tag {
     font-size: 0.8125rem;
