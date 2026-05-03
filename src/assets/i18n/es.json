@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Rafael Bañón Martín",
+    "subtitle": "Desarrollador de Software — Frontend",
+    "tagline": "Construyendo interfaces rápidas, limpias y modernas, mejorando experiencias de producto y colaborando en todo el stack."
+  },
+  "about": {
+    "eyebrow": "Perfil profesional",
+    "title": "Sobre mí",
+    "bioTitle": "Quién soy",
+    "paragraphs": [
+      "Soy un desarrollador con foco en frontend, con experiencia construyendo aplicaciones web modernas, escalables y centradas en el usuario. Mi stack principal es Angular, Vue y TypeScript, y disfruto creando interfaces limpias, mantenibles y rápidas.",
+      "Con el tiempo, también he trabajado en otras capas del stack con Node.js, Python, SQL e integraciones de APIs, lo que me permite colaborar más allá del frontend y entender los productos de forma más completa.",
+      "Me importan la arquitectura, los componentes reutilizables, la accesibilidad, el diseño responsivo y el rendimiento. Últimamente también he ido ampliando mis conocimientos en testing, CI/CD, plataformas cloud, observabilidad y flujos de trabajo asistidos por IA.",
+      "Fuera del trabajo, disfruto explorando la domótica, el IoT y proyectos personales que me permiten experimentar con nuevas herramientas, flujos de trabajo e ideas de forma más práctica."
+    ],
+    "certifications": {
+      "title": "Certificaciones",
+      "badge": "Validado"
+    }
+  },
+  "experience": {
+    "eyebrow": "Trayectoria",
+    "title": "Experiencia",
+    "desc": "Más de 4 años de experiencia frontend en desarrollo de producto, mantenimiento de sistemas, integraciones de APIs y trabajo técnico multidisciplinar.",
+    "jobs": {
+      "capgemini": {
+        "role": "Desarrollador de Software",
+        "period": "Sep 2022 – Presente",
+        "badge": "Actual",
+        "summary": "Desarrollo y mantenimiento de aplicaciones frontend en producción a escala — con responsabilidad en la entrega de features, integraciones de APIs y optimización del rendimiento en múltiples proyectos de cliente.",
+        "tasks": [
+          "Diseñé capas de integración de APIs REST conectando SPAs a múltiples servicios backend y proveedores externos",
+          "Lideré mejoras de rendimiento frontend en aplicaciones en producción, con foco en velocidad de carga, eficiencia de renderizado y Core Web Vitals",
+          "Entregué features completas desde la especificación técnica hasta el despliegue en producción en productos orientados al cliente",
+          "Diagnostiqué y resolví defectos en producción en bases de código legadas y modernas complejas bajo restricciones reales de entrega",
+          "Desarrollé cobertura de tests unitarios y funcionales automatizados en flujos críticos de usuario, reduciendo el riesgo de regresión en cada release",
+          "Lideré el mantenimiento correctivo y evolutivo de sistemas frontend a gran escala, equilibrando soluciones inmediatas con la salud del código a largo plazo"
+        ]
+      },
+      "sagitaz": {
+        "role": "Desarrollador Web",
+        "period": "Feb 2022 – May 2022",
+        "badge": "Cargo anterior",
+        "summary": "Desarrollé productos web full-stack en un entorno basado en Zoho, entregando herramientas de automatización y funcionalidades orientadas al cliente en capas de frontend, backend y datos.",
+        "tasks": [
+          "Desarrollé y desplegué aplicaciones web personalizadas en Zoho Suite, integrando UI, lógica de negocio y flujos backend de extremo a extremo",
+          "Diseñé y construí flujos de chatbot para automatización interna de negocio y escenarios de interacción con clientes",
+          "Mantuve y optimicé bases de datos MySQL y MongoDB, mejorando la estructura de consultas y la integridad de los datos"
+        ]
+      },
+      "audiovisual": {
+        "role": "Técnico Audiovisual",
+        "period": "Ene 2018 – Dic 2021",
+        "badge": "Etapa anterior",
+        "summary": "Trabajo en entornos de producción en directo de alta presión, con precisión técnica, resolución rápida de problemas y coordinación estrecha entre equipos.",
+        "tasks": [
+          "Gestioné cadenas de señal de vídeo y audio en directo para streaming de broadcast, asegurando la continuidad de la entrega en entornos de tiempo crítico",
+          "Ejecuté flujos de postproducción de extremo a extremo, desde la captura bruta hasta la entrega final, manteniendo la calidad técnica en todos los entregables"
+        ]
+      }
+    }
+  },
+  "skills": {
+    "eyebrow": "Perfil técnico",
+    "title": "Habilidades",
+    "desc": "Ingeniero con foco en frontend, construyendo interfaces escalables, colaborando en todo el stack y expandiéndose hacia DevOps y flujos de trabajo con IA.",
+    "categories": {
+      "frontend":      { "title": "Ingeniería Frontend",         "badge": "Principal",        "description": "Construcción de SPAs modernas, sistemas de UI reutilizables y arquitecturas frontend mantenibles." },
+      "architecture":  { "title": "Arquitectura",                "description": "Estructuración de aplicaciones escalables con fuerte atención a la mantenibilidad y la calidad de la UX." },
+      "backend":       { "title": "Backend y APIs",              "badge": "Stack de apoyo",   "description": "Trabajo cómodo con integraciones de backend, manejo de datos y desarrollo de productos basados en APIs." },
+      "testing":       { "title": "Testing",                     "description": "Mejorando la confianza en la entrega con testing automatizado y flujos de trabajo orientados a la calidad." },
+      "tooling":       { "title": "Herramientas y Flujo de Trabajo", "description": "Herramientas del día a día para colaboración, calidad de código, depuración y productividad del desarrollador." },
+      "devops":        { "title": "DevOps y Observabilidad",     "badge": "En crecimiento",   "description": "Expandiéndome en pipelines de despliegue, monitorización y visibilidad operacional." },
+      "cloud":         { "title": "Cloud e IA",                  "badge": "Aprendiendo",      "description": "Explorando plataformas cloud y desarrollo asistido por IA para ampliar las capacidades del producto." },
+      "collaboration": { "title": "Colaboración",                "description": "Comunicación clara, autonomía y adaptabilidad al trabajar con equipos y objetivos de producto." }
+    }
+  },
+  "projects": {
+    "eyebrow": "Proyectos destacados",
+    "title": "Proyectos",
+    "desc": "Proyectos prácticos que muestran desarrollo frontend, integraciones, trabajo de rendimiento y desafíos técnicos que he resuelto.",
+    "comingSoon": "Próximamente",
+    "github": "GitHub",
+    "liveDemo": "Demo en vivo",
+    "demo": "Demo",
+    "items": {
+      "githubDashboard":    { "description": "Panel de análisis de GitHub en tiempo real construido con Vue 3 + TypeScript. Busca cualquier usuario para ver repositorios, lenguajes (gráfico donut), actividad reciente y estadísticas.", "type": "Open Source" },
+      "portfolio":          { "description": "El portfolio que estás viendo. Angular + TypeScript con modo oscuro/claro, i18n EN/ES, scroll suave, diseño responsivo y animaciones modernas.", "type": "Personal" },
+      "linkedinAssistant":  { "description": "Generador de contenido para LinkedIn con IA, construido con React + TypeScript. Flujo de tres pasos: introduce el tema y tono, elige entre hooks generados por IA y selecciona la variante final del post. Los borradores se guardan en Supabase.", "type": "Personal" },
+      "grimoire":           { "description": "Creador de personajes de D&D 5e completo. Asistente paso a paso (identidad, clase, puntuaciones, competencias, equipo, hechizos), ficha de personaje en vivo, navegador de hechizos, navegador de objetos y seguimiento de campaña. Autenticación + guardado en la nube con Supabase.", "type": "Personal" },
+      "comingSoon":         { "type": "En desarrollo" }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Contacto",
+    "desc": "¿Tienes un proyecto, una oferta que comentar, o simplemente quieres conectar? Estas son las mejores formas de contactarme.",
+    "items": {
+      "email":    { "label": "Email",     "title": "banonrafael@gmail.com",  "description": "Ideal para oportunidades laborales, colaboraciones y conversaciones más largas." },
+      "linkedin": { "label": "LinkedIn",  "title": "banonrafael",            "description": "Útil para networking profesional y mantenerse en contacto." },
+      "github":   { "label": "GitHub",    "title": "github.com/rbanon",      "description": "Para código, proyectos y trabajo personal que construyo públicamente." },
+      "location": { "label": "Ubicación", "title": "Valencia, España",       "description": "Con base en Valencia y disponible para oportunidades con trabajo remoto." }
+    }
+  },
+  "footer": {
+    "built": "Construido con Angular y TypeScript",
+    "rights": "Todos los derechos reservados."
+  }
+}

@@ -1,7 +1,7 @@
 <nav class="navbar">
   <div class="container navbar__container">
     <!-- Logo -->
-    <a href="#" class="navbar__logo">
+    <a href="#" class="navbar__logo" (click)="goHome($event)">
       <img
         [src]="themeService.theme() === 'dark' ? 'assets/svg/rb-logo-white.svg' : 'assets/svg/rb-logo-black.svg'"
         alt="Rafael Bañon"
@@ -18,7 +18,7 @@
             [class.active]="activeTab === tab.id"
             (click)="switchTab(tab.id)"
           >
-            {{ tab.label }}
+            {{ tab.labelKey | transloco }}
           </button>
         </li>
       }
@@ -40,7 +40,7 @@
       <div class="navbar__lang-toggle">
         <button
           class="navbar__lang-btn"
-          [class.active]="currentLang === 'en'"
+          [class.active]="currentLang() === 'en'"
           (click)="setLanguage('en')"
           aria-label="Switch to English"
         >
@@ -49,7 +49,7 @@
         <span class="navbar__lang-separator">|</span>
         <button
           class="navbar__lang-btn"
-          [class.active]="currentLang === 'es'"
+          [class.active]="currentLang() === 'es'"
           (click)="setLanguage('es')"
           aria-label="Cambiar a español"
         >
@@ -87,7 +87,7 @@
             [class.active]="activeTab === tab.id"
             (click)="switchTab(tab.id); closeMenu()"
           >
-            {{ tab.label }}
+            {{ tab.labelKey | transloco }}
           </button>
         </li>
       }

@@ -1,7 +1,5 @@
 export interface ContactItem {
-  label: string;
-  title: string;
-  description: string;
+  key: string;
   href?: string;
   external?: boolean;
   isStatic?: boolean;
@@ -9,34 +7,8 @@ export interface ContactItem {
 }
 
 export const CONTACT_DATA: ContactItem[] = [
-  {
-    label: 'Email',
-    title: 'banonrafael@gmail.com',
-    description: 'Best for job opportunities, collaborations and longer conversations.',
-    href: 'mailto:banonrafael@gmail.com',
-    icon: 'email',
-  },
-  {
-    label: 'LinkedIn',
-    title: 'banonrafael',
-    description: 'Useful for professional networking and keeping in touch.',
-    href: 'https://linkedin.com/in/banonrafael',
-    external: true,
-    icon: 'linkedin',
-  },
-  {
-    label: 'GitHub',
-    title: 'github.com/rbanon',
-    description: 'For code, projects and side work I’m building publicly.',
-    href: 'https://github.com/rbanon',
-    external: true,
-    icon: 'github',
-  },
-  {
-    label: 'Location',
-    title: 'Valencia, Spain',
-    description: 'Based in Valencia and available for remote-friendly opportunities.',
-    isStatic: true,
-    icon: 'location',
-  },
+  { key: 'email',    href: 'mailto:banonrafael@gmail.com',        icon: 'email'    },
+  { key: 'linkedin', href: 'https://linkedin.com/in/banonrafael', icon: 'linkedin', external: true },
+  { key: 'github',   href: 'https://github.com/rbanon',           icon: 'github',   external: true },
+  { key: 'location',                                               icon: 'location', isStatic: true },
 ];

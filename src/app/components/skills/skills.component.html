@@ -1,25 +1,23 @@
 <section class="section skills" id="skills">
   <div class="container">
     <div class="section-heading">
-      <span class="section-eyebrow" i18n>Technical profile</span>
-      <h2 class="section-title" i18n>Skills</h2>
-      <p class="section-description" i18n>
-        Frontend-focused engineer building scalable interfaces, collaborating across the stack and expanding into DevOps and AI-driven workflows.
-      </p>
+      <span class="section-eyebrow">{{ 'skills.eyebrow' | transloco }}</span>
+      <h2 class="section-title">{{ 'skills.title' | transloco }}</h2>
+      <p class="section-description">{{ 'skills.desc' | transloco }}</p>
     </div>
 
     <div class="skills__grid">
-      @for (category of categories; track category.title) {
+      @for (category of categories; track category.key) {
         <article class="skills__category" [class.skills__category--primary]="category.primary">
           <div class="skills__category-header">
-            <h3 class="skills__category-title">{{ category.title }}</h3>
-            @if (category.badge) {
-              <span class="skills__category-badge" [class.skills__category-badge--muted]="category.badge.muted">
-                {{ category.badge.label }}
+            <h3 class="skills__category-title">{{ 'skills.categories.' + category.key + '.title' | transloco }}</h3>
+            @if (category.hasBadge) {
+              <span class="skills__category-badge" [class.skills__category-badge--muted]="category.badgeMuted">
+                {{ 'skills.categories.' + category.key + '.badge' | transloco }}
               </span>
             }
           </div>
-          <p class="skills__category-description">{{ category.description }}</p>
+          <p class="skills__category-description">{{ 'skills.categories.' + category.key + '.description' | transloco }}</p>
           <div class="skills__tags">
             @for (tag of category.tags; track tag.label) {
               <span class="skills__tag" [class.skills__tag--featured]="tag.featured">{{ tag.label }}</span>

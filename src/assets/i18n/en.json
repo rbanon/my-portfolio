@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Rafael Bañón Martín",
+    "subtitle": "Software Developer — Frontend",
+    "tagline": "Building fast, clean and modern interfaces, improving product experiences and collaborating across the stack."
+  },
+  "about": {
+    "eyebrow": "Professional profile",
+    "title": "About",
+    "bioTitle": "Who I am",
+    "paragraphs": [
+      "I'm a frontend-focused developer with experience building modern, scalable and user-centered web applications. My main stack is Angular, Vue and TypeScript, and I enjoy creating interfaces that are clean, maintainable and fast.",
+      "Over time, I've also worked across the stack with Node.js, Python, SQL and API integrations, which helps me collaborate comfortably beyond the frontend and understand products in a more complete way.",
+      "I care about architecture, reusable components, accessibility, responsive design and performance. Recently, I've also been expanding into testing, CI/CD, cloud platforms, observability and AI-assisted development workflows.",
+      "Outside of work, I enjoy exploring home automation, IoT and side projects that let me experiment with new tools, workflows and ideas in a more hands-on way."
+    ],
+    "certifications": {
+      "title": "Certifications",
+      "badge": "Validated"
+    }
+  },
+  "experience": {
+    "eyebrow": "Career path",
+    "title": "Experience",
+    "desc": "4+ years of frontend experience in product development, system maintenance, API integrations and cross-functional technical work.",
+    "jobs": {
+      "capgemini": {
+        "role": "Software Developer",
+        "period": "Sep 2022 – Present",
+        "badge": "Current",
+        "summary": "Building and maintaining production frontend applications at scale — owning feature delivery, API integrations and performance optimization across multiple client projects.",
+        "tasks": [
+          "Architected REST API integration layers connecting SPAs to multiple backend services and third-party providers",
+          "Drove frontend performance improvements across production applications, targeting load speed, render efficiency and Core Web Vitals",
+          "Delivered complete features from technical specification to production release on client-facing products",
+          "Diagnosed and resolved production defects across complex legacy and modern codebases under real delivery constraints",
+          "Built automated unit and functional test coverage across critical user flows, reducing regression risk on each release",
+          "Led corrective and evolutionary maintenance of large-scale frontend systems, balancing short-term fixes with long-term code health"
+        ]
+      },
+      "sagitaz": {
+        "role": "Web Developer",
+        "period": "Feb 2022 – May 2022",
+        "badge": "Earlier role",
+        "summary": "Built full-stack web products in a Zoho-based environment, delivering automation tools and customer-facing features across frontend, backend and data layers.",
+        "tasks": [
+          "Developed and shipped custom web applications on Zoho Suite, integrating UI, business logic and backend workflows end-to-end",
+          "Designed and built chatbot flows covering both internal business automation and client-facing interaction scenarios",
+          "Maintained and optimized MySQL and MongoDB databases, improving query structure and data integrity"
+        ]
+      },
+      "audiovisual": {
+        "role": "Audiovisual Technician",
+        "period": "Jan 2018 – Dec 2021",
+        "badge": "Previous stage",
+        "summary": "Operated in high-pressure live production environments requiring technical precision, fast problem-solving and close cross-team coordination.",
+        "tasks": [
+          "Managed live video and audio signal chains for broadcast streaming, ensuring delivery continuity in time-critical environments",
+          "Ran end-to-end post-production workflows from raw capture to final output, maintaining technical quality across deliverables"
+        ]
+      }
+    }
+  },
+  "skills": {
+    "eyebrow": "Technical profile",
+    "title": "Skills",
+    "desc": "Frontend-focused engineer building scalable interfaces, collaborating across the stack and expanding into DevOps and AI-driven workflows.",
+    "categories": {
+      "frontend":      { "title": "Frontend Engineering",    "badge": "Core",             "description": "Building modern SPAs, reusable UI systems and maintainable frontend architectures." },
+      "architecture":  { "title": "Architecture",            "description": "Structuring scalable applications with strong attention to maintainability and UX quality." },
+      "backend":       { "title": "Backend & APIs",          "badge": "Supporting stack", "description": "Working comfortably with backend integrations, data handling and API-based product development." },
+      "testing":       { "title": "Testing",                 "description": "Improving delivery confidence with automated testing and quality-focused workflows." },
+      "tooling":       { "title": "Tooling & Workflow",      "description": "Daily tools for collaboration, code quality, debugging and developer productivity." },
+      "devops":        { "title": "DevOps & Observability",  "badge": "Growing",          "description": "Expanding into deployment pipelines, monitoring and operational visibility." },
+      "cloud":         { "title": "Cloud & AI",              "badge": "Learning",         "description": "Exploring cloud platforms and AI-assisted development to extend product capabilities." },
+      "collaboration": { "title": "Collaboration",           "description": "Clear communication, ownership and adaptability when working with teams and product goals." }
+    }
+  },
+  "projects": {
+    "eyebrow": "Featured work",
+    "title": "Projects",
+    "desc": "Hands-on projects showcasing frontend development, integrations, performance work and technical challenges I've solved.",
+    "comingSoon": "Coming soon",
+    "github": "GitHub",
+    "liveDemo": "Live Demo",
+    "demo": "Demo",
+    "items": {
+      "githubDashboard":    { "description": "Real-time GitHub analytics dashboard built with Vue 3 + TypeScript. Search any username to see repositories, languages (donut chart), recent activity and stats.", "type": "Open Source" },
+      "portfolio":          { "description": "This portfolio you're viewing. Angular + TypeScript with dark/light mode, EN/ES i18n, smooth scroll, responsive design and modern animations.", "type": "Personal" },
+      "linkedinAssistant":  { "description": "AI-powered LinkedIn content generator built with React + TypeScript. Three-step flow: input topic and tone, pick from AI-generated hooks, then choose the final post variant. Drafts are stored in Supabase.", "type": "Personal" },
+      "grimoire":           { "description": "Full-featured D&D 5e character creator. Step-by-step wizard (identity, class, ability scores, proficiencies, equipment, spells), live character sheet, spell browser, item browser, and campaign tracker. Auth + cloud save via Supabase.", "type": "Personal" },
+      "comingSoon":         { "type": "In progress" }
+    }
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title": "Contact",
+    "desc": "Have a project in mind, a role to discuss, or just want to connect? These are the best ways to reach me.",
+    "items": {
+      "email":    { "label": "Email",    "title": "banonrafael@gmail.com",  "description": "Best for job opportunities, collaborations and longer conversations." },
+      "linkedin": { "label": "LinkedIn", "title": "banonrafael",            "description": "Useful for professional networking and keeping in touch." },
+      "github":   { "label": "GitHub",   "title": "github.com/rbanon",      "description": "For code, projects and side work I'm building publicly." },
+      "location": { "label": "Location", "title": "Valencia, Spain",        "description": "Based in Valencia and available for remote-friendly opportunities." }
+    }
+  },
+  "footer": {
+    "built": "Built with Angular and TypeScript",
+    "rights": "All rights reserved."
+  }
+}

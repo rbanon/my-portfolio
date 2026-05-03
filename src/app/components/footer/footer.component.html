@@ -2,14 +2,11 @@
   <div class="container footer__container">
 
     <div class="footer__left">
-      <!-- <span class="footer__name">Rafael Bañón</span> -->
-      <span class="footer__built">
-        Built with Angular and TypeScript
-      </span>
+      <span class="footer__built">{{ 'footer.built' | transloco }}</span>
     </div>
 
     <div class="footer__center">
-      <p class="footer__copy">&copy; {{ currentYear }} Rafael Bañón. All rights reserved.</p>
+      <p class="footer__copy">&copy; {{ currentYear }} Rafael Bañón. {{ 'footer.rights' | transloco }}</p>
     </div>
 
     <div class="footer__right">

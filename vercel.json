@@ -1,9 +1,6 @@
 {
   "outputDirectory": "dist/my-portfolio/browser",
   "rewrites": [
-    { "source": "/es", "destination": "/es/index.html" },
-    { "source": "/es/(.*)", "destination": "/es/index.html" },
-    { "source": "/", "destination": "/en-US/index.html" },
-    { "source": "/(.*)", "destination": "/en-US/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

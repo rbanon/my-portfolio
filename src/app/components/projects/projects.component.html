@@ -2,16 +2,13 @@
   <div class="container">
 
     <div class="section-heading">
-      <span class="section-eyebrow" i18n>Featured work</span>
-      <h2 class="section-title" i18n>Projects</h2>
-      <p class="section-description" i18n>
-        Hands-on projects showcasing frontend development, integrations, performance work
-        and technical challenges I've solved.
-      </p>
+      <span class="section-eyebrow">{{ 'projects.eyebrow' | transloco }}</span>
+      <h2 class="section-title">{{ 'projects.title' | transloco }}</h2>
+      <p class="section-description">{{ 'projects.desc' | transloco }}</p>
     </div>
 
     <div class="projects__grid">
-      @for (project of projects; track project.name) {
+      @for (project of projects; track project.key) {
 
         @if (project.isComingSoon) {
           <article class="projects__card projects__card--coming-soon">
@@ -24,7 +21,7 @@
               </div>
               <div class="projects__coming-soon-content">
                 <h3 class="projects__coming-soon-title">{{ project.name }}</h3>
-                <p class="projects__coming-soon-text" i18n>Coming soon</p>
+                <p class="projects__coming-soon-text">{{ 'projects.comingSoon' | transloco }}</p>
               </div>
             </div>
           </article>
@@ -33,12 +30,10 @@
           <article class="projects__card">
             <div class="projects__card-header">
               <h3 class="projects__card-title">{{ project.name }}</h3>
-              @if (project.type) {
-                <span class="projects__card-badge">{{ project.type }}</span>
-              }
+              <span class="projects__card-badge">{{ 'projects.items.' + project.key + '.type' | transloco }}</span>
             </div>
 
-            <p class="projects__card-description">{{ project.description }}</p>
+            <p class="projects__card-description">{{ 'projects.items.' + project.key + '.description' | transloco }}</p>
 
             <div class="projects__card-tech">
               @for (tech of project.tech; track tech) {
@@ -48,25 +43,25 @@
 
             <div class="projects__card-links">
               @if (project.github) {
-                <a [href]="project.github" target="_blank" rel="noopener noreferrer" class="projects__card-link" i18n>
+                <a [href]="project.github" target="_blank" rel="noopener noreferrer" class="projects__card-link">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.035-.303-.535-1.523.117-3.176 0 0 1.005-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.152 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                   </svg>
-                  GitHub
+                  {{ 'projects.github' | transloco }}
                 </a>
               }
               @if (project.live) {
-                <a [href]="project.live" target="_blank" rel="noopener noreferrer" class="projects__card-link projects__card-link--primary" i18n>
+                <a [href]="project.live" target="_blank" rel="noopener noreferrer" class="projects__card-link projects__card-link--primary">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
                     <circle cx="12" cy="12" r="5"/>
                   </svg>
-                  Live Demo
+                  {{ 'projects.liveDemo' | transloco }}
                 </a>
               }
               @if (project.demo) {
-                <a [href]="project.demo" target="_blank" rel="noopener noreferrer" class="projects__card-link" i18n>
-                  Demo
+                <a [href]="project.demo" target="_blank" rel="noopener noreferrer" class="projects__card-link">
+                  {{ 'projects.demo' | transloco }}
                 </a>
               }
             </div>

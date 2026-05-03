@@ -13,7 +13,11 @@
       "Bash(cd /d C:\\\\Projects\\\\my-portfolio)",
       "Bash(npx ng *)",
       "Bash(Get-ChildItem -Force)",
-      "Bash(Select-Object Name)"
+      "Bash(Select-Object Name)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Projects\\\\my-portfolio\" -Recurse -Force)",
+      "Bash(Select-Object -First 100)",
+      "Bash(Format-Table FullName)",
+      "Bash(git checkout *)"
     ]
   }
 }

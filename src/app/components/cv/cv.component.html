@@ -20,24 +20,24 @@
     <!-- Profile -->
     <section class="cv__section">
       <h2 class="cv__section-title">Profile</h2>
-      <p class="cv__profile">{{ profile }}</p>
+      <p class="cv__profile">{{ profile() }}</p>
     </section>
 
     <!-- Experience -->
     <section class="cv__section">
       <h2 class="cv__section-title">Experience</h2>
-      @for (job of experiences; track job.company) {
+      @for (job of experiences(); track job.key) {
         <div class="cv__job">
           <div class="cv__job-header">
             <div class="cv__job-title">
-              <span class="cv__job-role">{{ job.role }}</span>
+              <span class="cv__job-role">{{ 'experience.jobs.' + job.key + '.role' | transloco }}</span>
               <span class="cv__job-sep"> · </span>
               <span class="cv__job-company">{{ job.company }}</span>
             </div>
-            <span class="cv__job-period">{{ job.period }}</span>
+            <span class="cv__job-period">{{ 'experience.jobs.' + job.key + '.period' | transloco }}</span>
           </div>
           <ul class="cv__job-tasks">
-            @for (task of job.tasks; track task) {
+            @for (task of job.tasks; track $index) {
               <li>{{ task }}</li>
             }
           </ul>
@@ -49,9 +49,9 @@
     <section class="cv__section">
       <h2 class="cv__section-title">Skills</h2>
       <div class="cv__skills">
-        @for (cat of skillCategories; track cat.title) {
+        @for (cat of skillCategories; track cat.key) {
           <div class="cv__skill-row">
-            <span class="cv__skill-category">{{ cat.title }}</span>
+            <span class="cv__skill-category">{{ 'skills.categories.' + cat.key + '.title' | transloco }}</span>
             <span class="cv__skill-tags">{{ tagList(cat) }}</span>
           </div>
         }
@@ -61,7 +61,7 @@
     <!-- Projects -->
     <section class="cv__section">
       <h2 class="cv__section-title">Projects</h2>
-      @for (project of realProjects; track project.name) {
+      @for (project of realProjects; track project.key) {
         <div class="cv__project">
           <div class="cv__project-header">
             <span class="cv__project-name">{{ project.name }}</span>
@@ -69,7 +69,7 @@
               <a class="cv__project-link" [href]="project.github">{{ project.github }}</a>
             }
           </div>
-          <p class="cv__project-desc">{{ project.description }}</p>
+          <p class="cv__project-desc">{{ 'projects.items.' + project.key + '.description' | transloco }}</p>
           <p class="cv__project-tech">{{ project.tech.join(' · ') }}</p>
         </div>
       }

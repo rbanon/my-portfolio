@@ -1,38 +1,36 @@
 <section class="section experience" id="experience">
   <div class="container">
     <div class="section-heading">
-      <span class="section-eyebrow" i18n>Career path</span>
-      <h2 class="section-title" i18n>Experience</h2>
-      <p class="section-description" i18n>
-        4+ years of frontend experience in product development, system maintenance, API integrations and cross-functional technical work.
-      </p>
+      <span class="section-eyebrow">{{ 'experience.eyebrow' | transloco }}</span>
+      <h2 class="section-title">{{ 'experience.title' | transloco }}</h2>
+      <p class="section-description">{{ 'experience.desc' | transloco }}</p>
     </div>
 
     <div class="experience__timeline">
-      @for (job of experiences; track job.company) {
+      @for (job of experiences(); track job.key) {
         <article class="experience__item" [class.experience__item--primary]="job.primary">
           <div class="experience__marker"></div>
 
           <div class="experience__content">
             <div class="experience__header">
               <div class="experience__heading">
-                <h3 class="experience__role">{{ job.role }}</h3>
+                <h3 class="experience__role">{{ 'experience.jobs.' + job.key + '.role' | transloco }}</h3>
                 <span
                   class="experience__badge"
-                  [class.experience__badge--muted]="job.badge.muted"
-                >{{ job.badge.label }}</span>
+                  [class.experience__badge--muted]="job.badgeMuted"
+                >{{ 'experience.jobs.' + job.key + '.badge' | transloco }}</span>
               </div>
 
               <div class="experience__meta">
                 <span class="experience__company">{{ job.company }}</span>
-                <span class="experience__period">{{ job.period }}</span>
+                <span class="experience__period">{{ 'experience.jobs.' + job.key + '.period' | transloco }}</span>
               </div>
             </div>
 
-            <p class="experience__summary">{{ job.summary }}</p>
+            <p class="experience__summary">{{ 'experience.jobs.' + job.key + '.summary' | transloco }}</p>
 
             <ul class="experience__tasks">
-              @for (task of job.tasks; track task) {
+              @for (task of job.tasks; track $index) {
                 <li>{{ task }}</li>
               }
             </ul>

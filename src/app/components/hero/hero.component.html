@@ -15,14 +15,14 @@
     <div class="hero__content" *ngIf="!isLoading">
       <div>
         <img
-        [src]="themeService.theme() === 'dark' ? 'assets/svg/rb-logo-white.svg' : 'assets/svg/rb-logo-black.svg'"
-        alt="Rafael Bañon"
-        class="hero__logo"
-      />
+          [src]="themeService.theme() === 'dark' ? 'assets/svg/rb-logo-white.svg' : 'assets/svg/rb-logo-black.svg'"
+          alt="Rafael Bañon"
+          class="hero__logo"
+        />
       </div>
-      <h1 class="hero__title" i18n>Rafael Bañón Martín</h1>
-      <p class="hero__subtitle" i18n>Software Developer — Frontend</p>
-      <p class="hero__tagline" i18n>Building fast, clean and modern interfaces, improving product experiences and collaborating across the stack.</p>
+      <h1 class="hero__title">{{ 'hero.title' | transloco }}</h1>
+      <p class="hero__subtitle">{{ 'hero.subtitle' | transloco }}</p>
+      <p class="hero__tagline">{{ 'hero.tagline' | transloco }}</p>
     </div>
   </div>
 

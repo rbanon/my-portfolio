@@ -1,26 +1,21 @@
 <section class="section about" id="about">
   <div class="container">
     <div class="section-heading">
-      <span class="section-eyebrow" i18n>Professional profile</span>
-      <h2 class="section-title" i18n>About</h2>
+      <span class="section-eyebrow">{{ 'about.eyebrow' | transloco }}</span>
+      <h2 class="section-title">{{ 'about.title' | transloco }}</h2>
     </div>
 
     <div class="about__grid">
       <article class="about__card about__card--primary">
         <div class="about__profile">
           <div class="about__profile-media">
-            <img
-              class="about__profile-image"
-              [src]="logoSrc"
-              [alt]="about.profile.image.alt"
-            />
+            <img class="about__profile-image" [src]="logoSrc" [alt]="image.alt" />
           </div>
         </div>
 
         <div class="about__bio">
-          <h3 class="about__card-title">{{ about.profile.title }}</h3>
-
-          @for (paragraph of about.profile.paragraphs; track paragraph) {
+          <h3 class="about__card-title">{{ 'about.bioTitle' | transloco }}</h3>
+          @for (paragraph of paragraphs(); track $index) {
             <p>{{ paragraph }}</p>
           }
         </div>
@@ -28,48 +23,23 @@
 
       <article class="about__card">
         <div class="about__card-header">
-          <h3 class="about__card-title">{{ about.certifications.title }}</h3>
-          <span class="about__card-badge">{{ about.certifications.badge }}</span>
+          <h3 class="about__card-title">{{ 'about.certifications.title' | transloco }}</h3>
+          <span class="about__card-badge">{{ 'about.certifications.badge' | transloco }}</span>
         </div>
 
         <div class="about__certifications">
-          @for (certification of about.certifications.items; track certification.title) {
+          @for (cert of certifications; track cert.title) {
             <div class="about__certification">
               <div class="about__cert-badge">
-                <svg
-                  class="about__cert-icon"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 2L2 7L12 12L22 7L12 2Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M2 17L12 22L22 17"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M2 12L12 17L22 12"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
+                <svg class="about__cert-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
-
               <div class="about__cert-info">
-                <h4 class="about__cert-title">{{ certification.title }}</h4>
-                <p class="about__cert-issuer">{{ certification.issuer }}</p>
+                <h4 class="about__cert-title">{{ cert.title }}</h4>
+                <p class="about__cert-issuer">{{ cert.issuer }}</p>
               </div>
             </div>
           }
