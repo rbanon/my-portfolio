@@ -2,6 +2,7 @@ import { Component, inject, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ThemeService } from '../../services/theme.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,13 +12,13 @@ import { ThemeService } from '../../services/theme.service';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  private themeService = inject(ThemeService);
+  readonly themeService = inject(ThemeService);
+  private readonly languageService = inject(LanguageService);
   private sanitizer = inject(DomSanitizer);
 
   isMenuOpen = false;
-  currentTheme = this.themeService.getCurrentTheme();
-  currentLang = 'en'; // Temporarily hardcoded
-  activeTab = 'hero'; // Default to hero tab
+  get currentLang(): string { return this.languageService.getCurrentLanguage(); }
+  activeTab = 'hero';
 
   tabs = [
     { id: 'hero', label: 'Home' },
@@ -43,15 +44,13 @@ export class NavbarComponent {
    */
   toggleTheme(): void {
     this.themeService.toggleTheme();
-    this.currentTheme = this.themeService.getCurrentTheme();
   }
 
   /**
    * Set language
    */
   setLanguage(lang: string): void {
-    // Temporarily disabled
-    console.log(`Language switch to ${lang} disabled for debugging`);
+    this.languageService.setLanguage(lang);
   }
 
   /**
@@ -68,13 +67,15 @@ export class NavbarComponent {
     this.isMenuOpen = false;
   }
 
+  downloadCV(): void {
+    window.print();
+  }
+
   /**
    * Get theme icon SVG
    */
   getThemeIcon(): SafeHtml {
-    const svg = this.currentTheme === 'dark'
-      ? this.sunIcon
-      : this.moonIcon;
+    const svg = this.themeService.theme() === 'dark' ? this.sunIcon : this.moonIcon;
     return this.sanitizer.bypassSecurityTrustHtml(svg);
   }
 

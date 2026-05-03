@@ -7,33 +7,6 @@ $accent-mix-low: color-mix(in srgb, var(--accent) 8%, var(--bg-secondary));
 $accent-mix-mid: color-mix(in srgb, var(--accent) 14%, var(--bg-primary));
 $accent-mix-border: color-mix(in srgb, var(--accent) 30%, var(--border-color));
 
-.section-heading {
-  max-width: 760px;
-  margin: 0 auto 2.5rem;
-  text-align: center;
-}
-
-.section-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.375rem 0.75rem;
-  margin-bottom: 0.875rem;
-  border: 1px solid color-mix(in srgb, var(--accent) 20%, var(--border-color));
-  border-radius: 999px;
-  background-color: $accent-mix-low;
-  color: var(--accent);
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.section-description {
-  margin: 0.875rem auto 0;
-  max-width: min(62ch, 100%);
-  color: var(--text-secondary);
-  line-height: 1.7;
-}
 
 .skills__grid {
   display: grid;
@@ -165,9 +138,6 @@ $accent-mix-border: color-mix(in srgb, var(--accent) 30%, var(--border-color));
 }
 
 @media (max-width: 768px) {
-  .section-heading { margin-bottom: 2rem; }
-  .section-description { font-size: 0.95rem; }
-
   .skills__grid {
     grid-template-columns: 1fr;
     gap: 1rem;

@@ -5,7 +5,15 @@
       "Bash(ng new *)",
       "Bash(npm *)",
       "Bash(ng build *)",
-      "Bash(ng serve *)"
+      "Bash(ng serve *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Projects\\\\my-portfolio\" -Recurse -Directory)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Select-Object FullName)",
+      "PowerShell(Head *)",
+      "Bash(cd /d C:\\\\Projects\\\\my-portfolio)",
+      "Bash(npx ng *)",
+      "Bash(Get-ChildItem -Force)",
+      "Bash(Select-Object Name)"
     ]
   }
 }

@@ -78,6 +78,12 @@
   }
 }
 
+.hero__logo {
+  height: 25%;
+  width: 25%;
+  object-fit: cover;
+}
+
 .hero__button--secondary {
   background-color: var(--bg-tertiary);
   color: var(--text-primary);

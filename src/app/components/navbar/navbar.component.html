@@ -2,24 +2,40 @@
   <div class="container navbar__container">
     <!-- Logo -->
     <a href="#" class="navbar__logo">
-      <img src="assets/svg/rb-logo-white.svg" alt="Rafael Bañon" class="navbar__logo-image" />
+      <img
+        [src]="themeService.theme() === 'dark' ? 'assets/svg/rb-logo-white.svg' : 'assets/svg/rb-logo-black.svg'"
+        alt="Rafael Bañon"
+        class="navbar__logo-image"
+      />
     </a>
 
     <!-- Desktop Navigation Tabs -->
     <ul class="navbar__tabs">
-      <li *ngFor="let tab of tabs">
-        <button
-          class="navbar__tab"
-          [class.active]="activeTab === tab.id"
-          (click)="switchTab(tab.id)"
-        >
-          {{ tab.label }}
-        </button>
-      </li>
+      @for (tab of tabs; track tab.id) {
+        <li>
+          <button
+            class="navbar__tab"
+            [class.active]="activeTab === tab.id"
+            (click)="switchTab(tab.id)"
+          >
+            {{ tab.label }}
+          </button>
+        </li>
+      }
     </ul>
 
     <!-- Controls -->
     <div class="navbar__controls">
+      <!-- Download CV -->
+      <button class="navbar__cv-btn" (click)="downloadCV()" aria-label="Download CV">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        <span>CV</span>
+      </button>
+
       <!-- Language Toggle -->
       <div class="navbar__lang-toggle">
         <button
@@ -32,11 +48,10 @@
         </button>
         <span class="navbar__lang-separator">|</span>
         <button
-          disabled
           class="navbar__lang-btn"
           [class.active]="currentLang === 'es'"
           (click)="setLanguage('es')"
-          aria-label="Cambiar a español"   
+          aria-label="Cambiar a español"
         >
           ES
         </button>
@@ -44,11 +59,9 @@
 
       <!-- Theme Toggle -->
       <button
-        disabled
-        alt="Coming soon"
         class="navbar__theme-toggle"
         (click)="toggleTheme()"
-        [attr.aria-label]="currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+        [attr.aria-label]="themeService.theme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
         [innerHTML]="getThemeIcon()"
       ></button>
 
@@ -67,13 +80,20 @@
   <!-- Mobile Menu -->
   <div class="navbar__mobile-menu" [class.open]="isMenuOpen">
     <ul class="navbar__mobile-links">
-      <li *ngFor="let tab of tabs">
-        <button
-          class="navbar__mobile-link"
-          [class.active]="activeTab === tab.id"
-          (click)="switchTab(tab.id); closeMenu()"
-        >
-          {{ tab.label }}
+      @for (tab of tabs; track tab.id) {
+        <li>
+          <button
+            class="navbar__mobile-link"
+            [class.active]="activeTab === tab.id"
+            (click)="switchTab(tab.id); closeMenu()"
+          >
+            {{ tab.label }}
+          </button>
+        </li>
+      }
+      <li>
+        <button class="navbar__mobile-link navbar__mobile-cv" (click)="downloadCV(); closeMenu()">
+          Download CV
         </button>
       </li>
     </ul>

@@ -2,331 +2,151 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="1514756407139906143" datatype="html">
+        <source>Professional profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="1726363342938046830" datatype="html">
         <source>About</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.html</context>
-          <context context-type="linenumber">3,5</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">8,9</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">61,62</context>
+          <context context-type="linenumber">5,6</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7268960255192550849" datatype="html">
-        <source> Rafael is a frontend developer with several years of experience building modern, fast, and enjoyable interfaces. He works daily with HTML5, CSS3, TypeScript, and frameworks like Vue and Angular. He values clean, well-structured code and the balance between performance and design. </source>
+      <trans-unit id="2236877205125634440" datatype="html">
+        <source>Get in touch</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
-          <context context-type="linenumber">16,17</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="9216105486809558747" datatype="html">
-        <source> He also has experience with Node.js, Python, and MySQL, and holds certifications in Google Cloud Digital Leader and Microsoft Azure AZ-900. He previously worked as an audiovisual technician (video/audio signal management, streaming, video editing) from 2018 to 2021. </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
-          <context context-type="linenumber">19,20</context>
+          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
+          <context context-type="linenumber">4,5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7922989125096435449" datatype="html">
         <source>Contact</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
-          <context context-type="linenumber">3,5</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">12,13</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">65,66</context>
+          <context context-type="linenumber">5,6</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2385860251045137699" datatype="html">
-        <source> Have a project in mind or just want to say hi? Feel free to reach out. </source>
+      <trans-unit id="7620385702849306306" datatype="html">
+        <source> Have a project in mind, a role to discuss, or just want to connect? These are the best ways to reach me. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
           <context context-type="linenumber">7,8</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4768749765465246664" datatype="html">
-        <source>Email</source>
+      <trans-unit id="4845677126945713066" datatype="html">
+        <source>Career path</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
-          <context context-type="linenumber">20,21</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3262236020277300799" datatype="html">
-        <source>Phone</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
-          <context context-type="linenumber">33,34</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4440081753597585133" datatype="html">
-        <source>LinkedIn</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
-          <context context-type="linenumber">48,49</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1534029177398918729" datatype="html">
-        <source>GitHub</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
-          <context context-type="linenumber">62,63</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="471816275243265264" datatype="html">
-        <source>Location</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
-          <context context-type="linenumber">76,77</context>
+          <context context-type="sourcefile">src/app/components/experience/experience.component.html</context>
+          <context context-type="linenumber">4,5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3398353192845179101" datatype="html">
         <source>Experience</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/experience/experience.component.html</context>
-          <context context-type="linenumber">3,5</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">9,10</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">62,63</context>
+          <context context-type="linenumber">5,6</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1475918362893718196" datatype="html">
-        <source>RESTful API integration and third-party services in frontend apps</source>
+      <trans-unit id="1291499849018827973" datatype="html">
+        <source> 4+ years of frontend experience in product development, system maintenance, API integrations and cross-functional technical work. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/experience/experience.component.html</context>
-          <context context-type="linenumber">16,17</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3201402102485518041" datatype="html">
-        <source>Web performance optimization (load speed, UX)</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/experience/experience.component.html</context>
-          <context context-type="linenumber">17,18</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5951188491002228961" datatype="html">
-        <source>New feature design and development</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/experience/experience.component.html</context>
-          <context context-type="linenumber">18,19</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3475220377952670465" datatype="html">
-        <source>Software evaluation, debugging, and performance improvement</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/experience/experience.component.html</context>
-          <context context-type="linenumber">19,20</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7968097483531158863" datatype="html">
-        <source>Unit, functional, and non-functional test plan execution</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/experience/experience.component.html</context>
-          <context context-type="linenumber">20,21</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8441252853852118056" datatype="html">
-        <source>Evolutionary and corrective maintenance of existing systems</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/experience/experience.component.html</context>
-          <context context-type="linenumber">21,22</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1822775416052064068" datatype="html">
-        <source>Development aligned with technical specs and programming best practices</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/experience/experience.component.html</context>
-          <context context-type="linenumber">22,23</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4757757389955102376" datatype="html">
-        <source>Web application development based on Zoho Suite</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/experience/experience.component.html</context>
-          <context context-type="linenumber">37,38</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4244622108365518122" datatype="html">
-        <source>Chatbot creation</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/experience/experience.component.html</context>
-          <context context-type="linenumber">38,39</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="709053604791373977" datatype="html">
-        <source>Work across different databases, backend and frontend contexts</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/experience/experience.component.html</context>
-          <context context-type="linenumber">39,40</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6894914317406666268" datatype="html">
-        <source>MySQL and MongoDB database maintenance and optimization</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/experience/experience.component.html</context>
-          <context context-type="linenumber">40,41</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6539287166556625789" datatype="html">
-        <source>Technical management of video/audio signals for streaming</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/experience/experience.component.html</context>
-          <context context-type="linenumber">55,56</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3735530322474168814" datatype="html">
-        <source>Content recording and video editing (post-production)</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/experience/experience.component.html</context>
-          <context context-type="linenumber">56,57</context>
+          <context context-type="linenumber">7,8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5991003645983039954" datatype="html">
         <source>Rafael Bañón Martín</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/hero/hero.component.html</context>
-          <context context-type="linenumber">16,17</context>
+          <context context-type="linenumber">23,24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8926548309623090682" datatype="html">
         <source>Software Developer — Frontend</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/hero/hero.component.html</context>
-          <context context-type="linenumber">17,18</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8713846363060734601" datatype="html">
-        <source>Building fast, clean, and modern web interfaces.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/hero/hero.component.html</context>
-          <context context-type="linenumber">18,19</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1432445531143138549" datatype="html">
-        <source> View my work </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/hero/hero.component.html</context>
-          <context context-type="linenumber">21,22</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5443518007260759592" datatype="html">
-        <source> Get in touch </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/hero/hero.component.html</context>
           <context context-type="linenumber">24,25</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4342625008558026850" datatype="html">
-        <source>Skills</source>
+      <trans-unit id="7707133272400992975" datatype="html">
+        <source>Building fast, clean and modern interfaces, improving product experiences and collaborating across the stack.</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">10,11</context>
+          <context context-type="sourcefile">src/app/components/hero/hero.component.html</context>
+          <context context-type="linenumber">25,26</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="5981303585029528380" datatype="html">
+        <source>Featured work</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">63,64</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/skills/skills.component.html</context>
-          <context context-type="linenumber">3,5</context>
+          <context context-type="sourcefile">src/app/components/projects/projects.component.html</context>
+          <context context-type="linenumber">5,6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7091571651222742304" datatype="html">
         <source>Projects</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">11,12</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">64,65</context>
-        </context-group>
-        <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/projects/projects.component.html</context>
-          <context context-type="linenumber">3,5</context>
+          <context context-type="linenumber">6,7</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1494947065237817959" datatype="html">
-        <source> View on GitHub </source>
+      <trans-unit id="4850243510168592851" datatype="html">
+        <source> Hands-on projects showcasing frontend development, integrations, performance work and technical challenges I&apos;ve solved. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/projects/projects.component.html</context>
-          <context context-type="linenumber">42</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4707904115365438366" datatype="html">
-        <source> Live Demo </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/projects/projects.component.html</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="linenumber">8,9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8067537011964257975" datatype="html">
         <source>Coming soon</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/projects/projects.component.html</context>
-          <context context-type="linenumber">63,64</context>
+          <context context-type="linenumber">27,28</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4031504140353379560" datatype="html">
-        <source>Frontend Frameworks</source>
+      <trans-unit id="1861891046626653474" datatype="html">
+        <source><x id="START_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;"/><x id="START_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path d=&quot;M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.035-.303-.535-1.523.117-3.176 0 0 1.005-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.152 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z&quot;/&gt;"/><x id="CLOSE_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path d=&quot;M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.035-.303-.535-1.523.117-3.176 0 0 1.005-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.152 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z&quot;/&gt;"/><x id="CLOSE_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;/svg&gt;"/> GitHub </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/skills/skills.component.html</context>
-          <context context-type="linenumber">8,9</context>
+          <context context-type="sourcefile">src/app/components/projects/projects.component.html</context>
+          <context context-type="linenumber">52,56</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1949800099101277248" datatype="html">
-        <source>Languages</source>
+      <trans-unit id="7132187566700035643" datatype="html">
+        <source><x id="START_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;"/><x id="START_TAG__SVG_RECT" ctype="x-_svg_rect" equiv-text="&lt;rect x=&quot;3&quot; y=&quot;3&quot; width=&quot;18&quot; height=&quot;18&quot; rx=&quot;2&quot; ry=&quot;2&quot;/&gt;"/><x id="CLOSE_TAG__SVG_RECT" ctype="x-_svg_rect" equiv-text="&lt;rect x=&quot;3&quot; y=&quot;3&quot; width=&quot;18&quot; height=&quot;18&quot; rx=&quot;2&quot; ry=&quot;2&quot;/&gt;"/><x id="START_TAG__SVG_CIRCLE" ctype="x-_svg_circle" equiv-text="&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;5&quot;/&gt;"/><x id="CLOSE_TAG__SVG_CIRCLE" ctype="x-_svg_circle" equiv-text="&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;5&quot;/&gt;"/><x id="CLOSE_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;/svg&gt;"/> Live Demo </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/skills/skills.component.html</context>
-          <context context-type="linenumber">18,19</context>
+          <context context-type="sourcefile">src/app/components/projects/projects.component.html</context>
+          <context context-type="linenumber">60,65</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3871300736051960950" datatype="html">
-        <source>Styling</source>
+      <trans-unit id="7952378331764736954" datatype="html">
+        <source> Demo </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/skills/skills.component.html</context>
-          <context context-type="linenumber">29,30</context>
+          <context context-type="sourcefile">src/app/components/projects/projects.component.html</context>
+          <context context-type="linenumber">69</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5015305205824485350" datatype="html">
-        <source>Backend &amp; Database</source>
+      <trans-unit id="4626637024402318646" datatype="html">
+        <source>Technical profile</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/skills/skills.component.html</context>
-          <context context-type="linenumber">39,40</context>
+          <context context-type="linenumber">4,5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1684734235599362204" datatype="html">
-        <source>Tools</source>
+      <trans-unit id="4342625008558026850" datatype="html">
+        <source>Skills</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/skills/skills.component.html</context>
-          <context context-type="linenumber">50,51</context>
+          <context context-type="linenumber">5,6</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="333646272841879551" datatype="html">
-        <source>Cloud &amp; AI</source>
+      <trans-unit id="6438294411074328917" datatype="html">
+        <source> Frontend-focused engineer building scalable interfaces, collaborating across the stack and expanding into DevOps and AI-driven workflows. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/skills/skills.component.html</context>
-          <context context-type="linenumber">62,63</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="966551028373612212" datatype="html">
-        <source>Soft Skills</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/skills/skills.component.html</context>
-          <context context-type="linenumber">72,73</context>
+          <context context-type="linenumber">7,8</context>
         </context-group>
       </trans-unit>
     </body>

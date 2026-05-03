@@ -1,0 +1,90 @@
+<div class="cv-wrapper">
+  <article class="cv">
+
+    <!-- Header -->
+    <header class="cv__header">
+      <div class="cv__header-main">
+        <h1 class="cv__name">Rafael Bañón Martín</h1>
+        <p class="cv__role">Software Developer — Frontend</p>
+      </div>
+      <div class="cv__contact">
+        <a href="mailto:banonrafael@gmail.com">banonrafael&#64;gmail.com</a>
+        <a href="https://linkedin.com/in/banonrafael" target="_blank">linkedin.com/in/banonrafael</a>
+        <a href="https://github.com/rbanon" target="_blank">github.com/rbanon</a>
+        <span>Valencia, Spain</span>
+      </div>
+    </header>
+
+    <hr class="cv__divider" />
+
+    <!-- Profile -->
+    <section class="cv__section">
+      <h2 class="cv__section-title">Profile</h2>
+      <p class="cv__profile">{{ profile }}</p>
+    </section>
+
+    <!-- Experience -->
+    <section class="cv__section">
+      <h2 class="cv__section-title">Experience</h2>
+      @for (job of experiences; track job.company) {
+        <div class="cv__job">
+          <div class="cv__job-header">
+            <div class="cv__job-title">
+              <span class="cv__job-role">{{ job.role }}</span>
+              <span class="cv__job-sep"> · </span>
+              <span class="cv__job-company">{{ job.company }}</span>
+            </div>
+            <span class="cv__job-period">{{ job.period }}</span>
+          </div>
+          <ul class="cv__job-tasks">
+            @for (task of job.tasks; track task) {
+              <li>{{ task }}</li>
+            }
+          </ul>
+        </div>
+      }
+    </section>
+
+    <!-- Skills -->
+    <section class="cv__section">
+      <h2 class="cv__section-title">Skills</h2>
+      <div class="cv__skills">
+        @for (cat of skillCategories; track cat.title) {
+          <div class="cv__skill-row">
+            <span class="cv__skill-category">{{ cat.title }}</span>
+            <span class="cv__skill-tags">{{ tagList(cat) }}</span>
+          </div>
+        }
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="cv__section">
+      <h2 class="cv__section-title">Projects</h2>
+      @for (project of realProjects; track project.name) {
+        <div class="cv__project">
+          <div class="cv__project-header">
+            <span class="cv__project-name">{{ project.name }}</span>
+            @if (project.github) {
+              <a class="cv__project-link" [href]="project.github">{{ project.github }}</a>
+            }
+          </div>
+          <p class="cv__project-desc">{{ project.description }}</p>
+          <p class="cv__project-tech">{{ project.tech.join(' · ') }}</p>
+        </div>
+      }
+    </section>
+
+    <!-- Certifications -->
+    <section class="cv__section">
+      <h2 class="cv__section-title">Certifications</h2>
+      @for (cert of certifications; track cert.title) {
+        <div class="cv__cert">
+          <span class="cv__cert-title">{{ cert.title }}</span>
+          <span class="cv__cert-issuer"> · {{ cert.issuer }}</span>
+        </div>
+      }
+    </section>
+
+  </article>
+</div>

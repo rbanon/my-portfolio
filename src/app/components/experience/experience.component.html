@@ -9,98 +9,36 @@
     </div>
 
     <div class="experience__timeline">
-      <!-- Capgemini -->
-      <article class="experience__item experience__item--primary">
-        <div class="experience__marker"></div>
+      @for (job of experiences; track job.company) {
+        <article class="experience__item" [class.experience__item--primary]="job.primary">
+          <div class="experience__marker"></div>
 
-        <div class="experience__content">
-          <div class="experience__header">
-            <div class="experience__heading">
-              <h3 class="experience__role">Software Developer</h3>
-              <span class="experience__badge" i18n>Current</span>
+          <div class="experience__content">
+            <div class="experience__header">
+              <div class="experience__heading">
+                <h3 class="experience__role">{{ job.role }}</h3>
+                <span
+                  class="experience__badge"
+                  [class.experience__badge--muted]="job.badge.muted"
+                >{{ job.badge.label }}</span>
+              </div>
+
+              <div class="experience__meta">
+                <span class="experience__company">{{ job.company }}</span>
+                <span class="experience__period">{{ job.period }}</span>
+              </div>
             </div>
 
-            <div class="experience__meta">
-              <span class="experience__company">Capgemini S.L.</span>
-              <span class="experience__period">Sep 2022 – Present</span>
-            </div>
+            <p class="experience__summary">{{ job.summary }}</p>
+
+            <ul class="experience__tasks">
+              @for (task of job.tasks; track task) {
+                <li>{{ task }}</li>
+              }
+            </ul>
           </div>
-
-          <p class="experience__summary" i18n>
-            Working on frontend applications with a strong focus on integrations,
-            performance, maintainability and feature delivery.
-          </p>
-
-          <ul class="experience__tasks">
-            <li i18n>Integrated REST APIs and third-party services into frontend applications</li>
-            <li i18n>Improved web performance, load speed and overall user experience</li>
-            <li i18n>Designed and developed new features aligned with product requirements</li>
-            <li i18n>Debugged issues, evaluated software behaviour and applied performance improvements</li>
-            <li i18n>Executed unit, functional and non-functional testing activities</li>
-            <li i18n>Handled corrective and evolutionary maintenance in existing systems</li>
-            <li i18n>Worked following technical specifications and development best practices</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- Sagitaz -->
-      <article class="experience__item">
-        <div class="experience__marker"></div>
-
-        <div class="experience__content">
-          <div class="experience__header">
-            <div class="experience__heading">
-              <h3 class="experience__role">Web Developer</h3>
-              <span class="experience__badge experience__badge--muted" i18n>Earlier role</span>
-            </div>
-
-            <div class="experience__meta">
-              <span class="experience__company">Sagitaz Valencia</span>
-              <span class="experience__period">Feb 2022 – May 2022</span>
-            </div>
-          </div>
-
-          <p class="experience__summary" i18n>
-            Delivered web solutions in Zoho-based environments with exposure to frontend,
-            backend logic and database maintenance.
-          </p>
-
-          <ul class="experience__tasks">
-            <li i18n>Developed web applications based on Zoho Suite</li>
-            <li i18n>Created chatbot solutions for business use cases</li>
-            <li i18n>Worked across frontend, backend and database-related tasks</li>
-            <li i18n>Maintained and optimized MySQL and MongoDB databases</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- Audiovisual Technician -->
-      <article class="experience__item">
-        <div class="experience__marker"></div>
-
-        <div class="experience__content">
-          <div class="experience__header">
-            <div class="experience__heading">
-              <h3 class="experience__role">Audiovisual Technician</h3>
-              <span class="experience__badge experience__badge--muted" i18n>Previous stage</span>
-            </div>
-
-            <div class="experience__meta">
-              <span class="experience__company">Various employers</span>
-              <span class="experience__period">Jan 2018 – Dec 2021</span>
-            </div>
-          </div>
-
-          <p class="experience__summary" i18n>
-            Technical background in live media workflows, signal management and post-production.
-          </p>
-
-          <ul class="experience__tasks">
-            <li i18n>Managed video and audio signals for streaming environments</li>
-            <li i18n>Handled content recording and video editing in post-production workflows</li>
-          </ul>
-        </div>
-      </article>
+        </article>
+      }
     </div>
   </div>
 </section>

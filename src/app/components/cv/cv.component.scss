@@ -1,0 +1,264 @@
+:host {
+  display: none;
+}
+
+@media print {
+  :host {
+    display: block;
+  }
+}
+
+.cv-wrapper {
+  display: none;
+}
+
+@media print {
+  .cv-wrapper {
+    display: block;
+  }
+
+  .cv {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 10pt;
+    line-height: 1.5;
+    color: #111;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+  }
+
+  // ---- Header ----
+
+  .cv__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .cv__name {
+    font-size: 20pt;
+    font-weight: 700;
+    margin: 0 0 0.15rem;
+    color: #111;
+    line-height: 1.1;
+  }
+
+  .cv__role {
+    font-size: 11pt;
+    color: #444;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .cv__contact {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    font-size: 8.5pt;
+    color: #444;
+    flex-shrink: 0;
+
+    a {
+      color: #0969da;
+      text-decoration: none;
+    }
+
+    span {
+      color: #555;
+    }
+  }
+
+  // ---- Divider ----
+
+  .cv__divider {
+    border: none;
+    border-top: 1.5px solid #ccc;
+    margin: 0.5rem 0 1rem;
+  }
+
+  // ---- Sections ----
+
+  .cv__section {
+    margin-bottom: 1.1rem;
+    page-break-inside: avoid;
+  }
+
+  .cv__section-title {
+    font-size: 8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.2rem;
+    margin: 0 0 0.55rem;
+  }
+
+  // ---- Profile ----
+
+  .cv__profile {
+    margin: 0;
+    font-size: 9.5pt;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  // ---- Experience ----
+
+  .cv__job {
+    margin-bottom: 0.85rem;
+    page-break-inside: avoid;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .cv__job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .cv__job-title {
+    font-size: 9.5pt;
+  }
+
+  .cv__job-role {
+    font-weight: 700;
+    color: #111;
+  }
+
+  .cv__job-sep {
+    color: #888;
+  }
+
+  .cv__job-company {
+    color: #0969da;
+    font-weight: 500;
+  }
+
+  .cv__job-period {
+    font-size: 8.5pt;
+    color: #666;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .cv__job-tasks {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+
+    li {
+      position: relative;
+      padding-left: 1rem;
+      font-size: 9pt;
+      color: #444;
+      line-height: 1.5;
+
+      &::before {
+        content: '·';
+        position: absolute;
+        left: 0.25rem;
+        color: #0969da;
+        font-weight: 700;
+      }
+    }
+  }
+
+  // ---- Skills ----
+
+  .cv__skills {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .cv__skill-row {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 9pt;
+    line-height: 1.4;
+    align-items: baseline;
+  }
+
+  .cv__skill-category {
+    font-weight: 700;
+    color: #111;
+    white-space: nowrap;
+    min-width: 11rem;
+    flex-shrink: 0;
+  }
+
+  .cv__skill-tags {
+    color: #444;
+  }
+
+  // ---- Projects ----
+
+  .cv__project {
+    margin-bottom: 0.7rem;
+    page-break-inside: avoid;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .cv__project-header {
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+    margin-bottom: 0.15rem;
+  }
+
+  .cv__project-name {
+    font-weight: 700;
+    font-size: 9.5pt;
+    color: #111;
+  }
+
+  .cv__project-link {
+    font-size: 8.5pt;
+    color: #0969da;
+    text-decoration: none;
+  }
+
+  .cv__project-desc {
+    margin: 0 0 0.15rem;
+    font-size: 9pt;
+    color: #444;
+    line-height: 1.5;
+  }
+
+  .cv__project-tech {
+    margin: 0;
+    font-size: 8.5pt;
+    color: #777;
+  }
+
+  // ---- Certifications ----
+
+  .cv__cert {
+    font-size: 9.5pt;
+    margin-bottom: 0.2rem;
+  }
+
+  .cv__cert-title {
+    font-weight: 600;
+    color: #111;
+  }
+
+  .cv__cert-issuer {
+    color: #555;
+  }
+}

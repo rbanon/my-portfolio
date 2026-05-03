@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ThemeService } from './services/theme.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -9,6 +9,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CvComponent } from './components/cv/cv.component';
 
 @Component({
   selector: 'app-root',
@@ -23,23 +24,16 @@ import { FooterComponent } from './components/footer/footer.component';
     ProjectsComponent,
     ContactComponent,
     FooterComponent,
+    CvComponent,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App implements OnInit {
+export class App {
   private themeService = inject(ThemeService);
 
   activeTab = 'hero';
 
-  ngOnInit(): void {
-    console.log('App initialized');
-    // Theme is initialized in ThemeService constructor
-  }
-
-  /**
-   * Handle tab change from navbar
-   */
   onTabChange(tabId: string): void {
     this.activeTab = tabId;
   }

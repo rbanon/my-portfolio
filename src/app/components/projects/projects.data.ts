@@ -32,6 +32,22 @@ export const PROJECTS_DATA: Project[] = [
     year: '2026',
   },
   {
+    name: 'LinkedIn Assistant',
+    description: 'AI-powered LinkedIn content generator built with React + TypeScript. Three-step flow: input topic and tone, pick from AI-generated hooks, then choose the final post variant. Drafts are stored in Supabase.',
+    tech: ['React 19', 'TypeScript', 'Supabase', 'Anthropic API', 'TanStack Query', 'Tailwind CSS', 'Vite'],
+    github: 'https://github.com/rbanon/linkedin-assistant',
+    type: 'Personal',
+    year: '2026',
+  },
+  {
+    name: 'Grimoire — DnD Creator',
+    description: 'Full-featured D&D 5e character creator. Step-by-step wizard (identity, class, ability scores, proficiencies, equipment, spells), live character sheet, spell browser, item browser, and campaign tracker. Auth + cloud save via Supabase.',
+    tech: ['Vue 3', 'TypeScript', 'Pinia', 'TanStack Query', 'Supabase', 'Zod', 'UnoCSS', 'Vite'],
+    github: 'https://github.com/rbanon/grimory-dnd',
+    type: 'Personal',
+    year: '2026',
+  },
+  {
     name: 'Coming soon',
     description: '',
     tech: [],
