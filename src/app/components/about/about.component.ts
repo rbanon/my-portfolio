@@ -1,7 +1,7 @@
 import { Component, inject, computed } from '@angular/core';
 import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { ABOUT_CERTIFICATIONS, Certification } from './about.data';
+import { ABOUT_CERTIFICATIONS, ABOUT_LANGUAGES, Certification, Language } from './about.data';
 
 @Component({
   selector: 'app-about',
@@ -17,6 +17,7 @@ export class AboutComponent {
   });
 
   readonly certifications: Certification[] = ABOUT_CERTIFICATIONS;
+  readonly languages: Language[] = ABOUT_LANGUAGES;
 
   readonly paragraphs = computed(() => {
     void this.activeLang();
