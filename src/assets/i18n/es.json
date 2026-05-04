@@ -25,6 +25,14 @@
     "certifications": {
       "title": "Certificaciones",
       "badge": "Validado"
+    },
+    "languages": {
+      "title": "Idiomas",
+      "badge": "Nativo y Profesional",
+      "levels": {
+        "native": "Nativo",
+        "professional": "Competencia profesional"
+      }
     }
   },
   "experience": {
