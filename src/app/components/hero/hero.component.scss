@@ -1,111 +1,108 @@
 :host {
   display: flex;
-  flex: 1;        
+  flex: 1;
 }
 
 .hero {
   position: relative;
   display: flex;
-  flex: 1; 
+  flex: 1;
   align-items: center;
-  justify-content: center;
   overflow: hidden;
   background-color: var(--bg-primary);
   padding-top: 4rem;
+  min-height: 100svh;
 }
 
 .hero__container {
   position: relative;
   z-index: 2;
-  text-align: center;
-  max-width: 800px;
+  max-width: 900px;
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .hero__content {
-  animation: fadeInUp 0.6s ease-out;
   position: relative;
   z-index: 3;
 }
 
+.hero__logo {
+  height: 2.5rem;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.6s ease-out 0.1s forwards;
+}
+
 .hero__title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 9vw, 7.5rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
-  line-height: 1.1;
-  position: relative;
-  z-index: 4;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease-out 0.25s forwards;
 }
 
 .hero__subtitle {
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-  color: var(--accent);
-  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
   font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.75rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease-out 0.4s forwards;
 }
 
 .hero__tagline {
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 300;
   color: var(--text-secondary);
-  margin-bottom: 2rem;
-  line-height: 1.6;
+  line-height: 1.7;
+  max-width: 52ch;
+  opacity: 0;
+  animation: fadeUp 0.7s ease-out 0.55s forwards;
 }
 
-.hero__buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+/* Animated Background — radial amber glow */
+.hero__background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse 70% 60% at 80% 50%,
+      color-mix(in srgb, var(--accent) 6%, transparent) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 40% 40% at 15% 85%,
+      color-mix(in srgb, var(--accent) 3%, transparent) 0%,
+      transparent 60%
+    );
 }
 
-.hero__button {
-  padding: 0.875rem 2rem;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 0.375rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border: none;
-}
-
-.hero__button--primary {
-  background-color: var(--accent);
-  color: white;
-
-  &:hover {
-    background-color: var(--accent-hover);
-    transform: translateY(-2px);
-  }
-}
-
-.hero__logo {
-  height: 25%;
-  width: 25%;
-  object-fit: cover;
-}
-
-.hero__button--secondary {
-  background-color: var(--bg-tertiary);
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
-
-  &:hover {
-    background-color: var(--bg-secondary);
-    border-color: var(--accent);
-    color: var(--accent);
-    transform: translateY(-2px);
-  }
-}
-
-/* Skeleton Styles */
+/* Skeleton Loading State */
 .hero__skeleton {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.hero__skeleton-title {
-  height: clamp(2.5rem, 5vw, 4rem);
-  width: 80%;
-  margin: 0 auto 0.5rem;
+.hero__skeleton-title,
+.hero__skeleton-subtitle,
+.hero__skeleton-tagline,
+.hero__skeleton-button {
   background: linear-gradient(
     90deg,
     var(--bg-tertiary) 25%,
@@ -117,76 +114,24 @@
   border-radius: 0.25rem;
 }
 
-.hero__skeleton-subtitle {
-  height: clamp(1.25rem, 2.5vw, 1.75rem);
-  width: 60%;
-  margin: 0 auto 1rem;
-  background: linear-gradient(
-    90deg,
-    var(--bg-tertiary) 25%,
-    var(--bg-secondary) 50%,
-    var(--bg-tertiary) 75%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-  border-radius: 0.25rem;
-}
-
-.hero__skeleton-tagline {
-  height: clamp(1rem, 2vw, 1.25rem);
-  width: 70%;
-  margin: 0 auto 2rem;
-  background: linear-gradient(
-    90deg,
-    var(--bg-tertiary) 25%,
-    var(--bg-secondary) 50%,
-    var(--bg-tertiary) 75%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-  border-radius: 0.25rem;
-}
+.hero__skeleton-title    { height: clamp(3.5rem, 9vw, 7.5rem); width: 70%; }
+.hero__skeleton-subtitle { height: 1rem; width: 30%; }
+.hero__skeleton-tagline  { height: 1.2rem; width: 55%; }
 
 .hero__skeleton-buttons {
   display: flex;
   gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
 
 .hero__skeleton-button {
   height: 3rem;
   width: 10rem;
-  background: linear-gradient(
-    90deg,
-    var(--bg-tertiary) 25%,
-    var(--bg-secondary) 50%,
-    var(--bg-tertiary) 75%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
   border-radius: 0.375rem;
 }
 
-/* Animated Background */
-.hero__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  background-image:
-    linear-gradient(var(--border-color) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
-  background-size: 50px 50px;
-  background-position: center center;
-  opacity: 0.15;
-  animation: gridMove 20s linear infinite;
-}
-
 /* Animations */
-@keyframes fadeInUp {
+@keyframes fadeUp {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -198,41 +143,28 @@
 }
 
 @keyframes shimmer {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
+  0%   { background-position:  200% 0; }
+  100% { background-position: -200% 0; }
 }
 
-@keyframes gridMove {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 50px 50px;
-  }
-}
-
-/* Mobile Styles */
+/* Mobile */
 @media (max-width: 768px) {
-  .hero__buttons {
-    flex-direction: column;
-    align-items: stretch;
+  .hero {
+    min-height: calc(100svh - 4rem);
+    align-items: flex-start;
+    padding-top: 4rem;
   }
 
-  .hero__button {
-    width: 100%;
+  .hero__container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
-  .hero__skeleton-buttons {
-    flex-direction: column;
-    align-items: center;
+  .hero__title {
+    font-size: clamp(3rem, 12vw, 5rem);
   }
 
-  .hero__skeleton-button {
-    width: 100%;
-    max-width: 10rem;
+  .hero__tagline {
+    max-width: 100%;
   }
 }
