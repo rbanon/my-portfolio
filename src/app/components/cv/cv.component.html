@@ -86,5 +86,16 @@
       }
     </section>
 
+    <!-- Languages -->
+    <section class="cv__section">
+      <h2 class="cv__section-title">Languages</h2>
+      @for (lang of languages; track lang.name) {
+        <div class="cv__lang">
+          <span class="cv__lang-name">{{ lang.name }}</span>
+          <span class="cv__lang-level"> · {{ 'about.languages.levels.' + lang.level | transloco }}</span>
+        </div>
+      }
+    </section>
+
   </article>
 </div>

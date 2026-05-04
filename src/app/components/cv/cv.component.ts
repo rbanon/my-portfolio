@@ -5,7 +5,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { EXPERIENCE_DATA } from '../experience/experience.data';
 import { SKILLS_DATA, SkillCategory } from '../skills/skills.data';
 import { PROJECTS_DATA, Project } from '../projects/projects.data';
-import { ABOUT_CERTIFICATIONS, Certification } from '../about/about.data';
+import { ABOUT_CERTIFICATIONS, ABOUT_LANGUAGES, Certification, Language } from '../about/about.data';
 
 @Component({
   selector: 'app-cv',
@@ -23,6 +23,7 @@ export class CvComponent {
   readonly skillCategories: SkillCategory[] = SKILLS_DATA.filter(c => c.key !== 'collaboration');
   readonly realProjects: Project[] = PROJECTS_DATA.filter(p => !p.isComingSoon);
   readonly certifications: Certification[] = ABOUT_CERTIFICATIONS;
+  readonly languages: Language[] = ABOUT_LANGUAGES;
 
   readonly experiences = computed(() => {
     void this.activeLang();

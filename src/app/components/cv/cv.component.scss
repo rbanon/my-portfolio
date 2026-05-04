@@ -261,4 +261,20 @@
   .cv__cert-issuer {
     color: #555;
   }
+
+  // ---- Languages ----
+
+  .cv__lang {
+    font-size: 9.5pt;
+    margin-bottom: 0.2rem;
+  }
+
+  .cv__lang-name {
+    font-weight: 600;
+    color: #111;
+  }
+
+  .cv__lang-level {
+    color: #555;
+  }
 }
