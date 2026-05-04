@@ -10,7 +10,6 @@
   align-items: center;
   background-color: var(--color-bg);
   padding-top: 4rem;
-  min-height: 100svh;
   overflow: hidden;
 }
 
@@ -28,7 +27,7 @@
 }
 
 .hero__logo {
-  height: 1.625rem;
+  height: clamp(4rem, 0.5rem + 7vw, 8rem);
   width: auto;
   object-fit: contain;
   display: block;
