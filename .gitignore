@@ -44,3 +44,6 @@ __screenshots__/
 Thumbs.db
 .vercel
 .env*.local
+
+# Claude Code — configuración e instrucciones privadas
+.claude/

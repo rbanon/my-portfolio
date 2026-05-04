@@ -1,40 +1,126 @@
 /* ============================================
-   CSS Custom Properties for Dark/Light Themes
+   Design System — DESIGN.md
+   Concepto: Developer portfolio · calidez contenida · elegancia oscura
    ============================================ */
 
 :root,
-:root.light {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f6f8fa;
-  --bg-tertiary: #eaeef2;
-  --border-color: #d0d7de;
-  --text-primary: #1f2328;
-  --text-secondary: #656d76;
-  --accent: #0969da;
-  --accent-hover: #0856b3;
-  --card-bg: #ffffff;
-  --card-border: #d0d7de;
-  --nav-bg: rgba(255, 255, 255, 0.95);
-  --shadow: rgba(0, 0, 0, 0.08);
+:root.dark {
+  /* Superficies */
+  --color-bg:              #111110;
+  --color-surface:         #161614;
+  --color-surface-2:       #1c1b18;
+  --color-surface-offset:  #222119;
+  --color-surface-dynamic: #2a2924;
+  --color-divider:         #2d2c27;
+  --color-border:          rgba(212, 201, 168, 0.10);
+
+  /* Tipografía */
+  --color-text:            #e8e4dc;
+  --color-text-muted:      #8a8679;
+  --color-text-faint:      #4a4843;
+
+  /* Acento — arena/trigo cálido */
+  --color-primary:          #c9a96e;
+  --color-primary-hover:    #b8934f;
+  --color-primary-active:   #a07e3a;
+  --color-primary-highlight: rgba(201, 169, 110, 0.12);
+
+  /* Sombras tono-matched */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.50);
+
+  /* Radios */
+  --radius-sm:   0.25rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   0.875rem;
+  --radius-xl:   1.25rem;
+  --radius-full: 9999px;
+
+  /* Fuentes */
+  --font-display: 'Cabinet Grotesk', sans-serif;
+  --font-body:    'Satoshi', 'Inter', sans-serif;
+
+  /* Nav */
+  --nav-bg: rgba(17, 17, 16, 0.85);
+
+  /* Aliases para compat. con componentes */
+  --bg-primary:    var(--color-bg);
+  --bg-secondary:  var(--color-surface);
+  --bg-tertiary:   var(--color-surface-2);
+  --border-color:  var(--color-border);
+  --text-primary:  var(--color-text);
+  --text-secondary:var(--color-text-muted);
+  --accent:        var(--color-primary);
+  --accent-hover:  var(--color-primary-hover);
+  --shadow:        var(--shadow-md);
 }
 
-:root.dark {
-  --bg-primary: #0d1117;
-  --bg-secondary: #161b22;
-  --bg-tertiary: #21262d;
-  --border-color: #30363d;
-  --text-primary: #e6edf3;
-  --text-secondary: #8b949e;
-  --accent: #58a6ff;
-  --accent-hover: #79b8ff;
-  --card-bg: #161b22;
-  --card-border: #30363d;
-  --nav-bg: rgba(13, 17, 23, 0.95);
-  --shadow: rgba(0, 0, 0, 0.3);
+:root.light {
+  --color-bg:              #f5f2ec;
+  --color-surface:         #f9f6f0;
+  --color-surface-2:       #fdf9f4;
+  --color-surface-offset:  #ede9e0;
+  --color-surface-dynamic: #e6e1d6;
+  --color-divider:         #d8d3c8;
+  --color-border:          rgba(138, 122, 90, 0.18);
+
+  --color-text:            #1a1916;
+  --color-text-muted:      #6b6659;
+  --color-text-faint:      #b8b2a6;
+
+  --color-primary:          #8a6c3a;
+  --color-primary-hover:    #7a5c2a;
+  --color-primary-active:   #6a4c1a;
+  --color-primary-highlight: rgba(138, 108, 58, 0.10);
+
+  --shadow-sm: 0 1px 2px rgba(26, 20, 10, 0.07);
+  --shadow-md: 0 4px 12px rgba(26, 20, 10, 0.09);
+  --shadow-lg: 0 12px 32px rgba(26, 20, 10, 0.13);
+
+  --radius-sm:   0.25rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   0.875rem;
+  --radius-xl:   1.25rem;
+  --radius-full: 9999px;
+
+  --font-display: 'Cabinet Grotesk', sans-serif;
+  --font-body:    'Satoshi', 'Inter', sans-serif;
+
+  --nav-bg: rgba(245, 242, 236, 0.88);
+
+  --bg-primary:    var(--color-bg);
+  --bg-secondary:  var(--color-surface);
+  --bg-tertiary:   var(--color-surface-2);
+  --border-color:  var(--color-border);
+  --text-primary:  var(--color-text);
+  --text-secondary:var(--color-text-muted);
+  --accent:        var(--color-primary);
+  --accent-hover:  var(--color-primary-hover);
+  --shadow:        var(--shadow-md);
 }
 
 /* ============================================
-   Base Styles
+   Escala tipográfica fluid
+   ============================================ */
+
+:root {
+  --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+  --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+  --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+  --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+  --text-hero: clamp(3rem,     0.5rem  + 7vw,    8rem);
+
+  /* Layout */
+  --content-narrow:  640px;
+  --content-default: 900px;
+  --content-wide:    1200px;
+}
+
+/* ============================================
+   Base
    ============================================ */
 
 * {
@@ -50,93 +136,82 @@ body {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--text-base);
   line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
-  color: var(--accent);
+  color: inherit;
   text-decoration: none;
-  transition: color 0.2s ease;
-
-  &:hover {
-    color: var(--accent-hover);
-  }
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 /* ============================================
-   Utility Classes
+   Utilidades globales
    ============================================ */
 
 .container {
-  max-width: 1200px;
+  max-width: var(--content-wide);
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
 .section {
-  padding: 5rem 0;
+  padding-block: clamp(4rem, 8vw, 8rem);
   display: flex;
   align-items: center;
 }
 
-.section-title {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  color: var(--text-primary);
-}
-
 .section-heading {
-  max-width: 760px;
-  margin: 0 auto 2.5rem;
-  text-align: center;
+  max-width: var(--content-default);
+  margin: 0 0 3rem;
 }
 
 .section-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.375rem 0.75rem;
-  margin-bottom: 0.875rem;
-  border: 1px solid color-mix(in srgb, var(--accent) 20%, var(--border-color));
-  border-radius: 999px;
-  background-color: color-mix(in srgb, var(--accent) 8%, var(--bg-secondary));
-  color: var(--accent);
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  margin-bottom: 1rem;
 }
 
 .section-description {
-  margin: 0.875rem auto 0;
-  max-width: min(62ch, 100%);
-  color: var(--text-secondary);
+  max-width: min(65ch, 100%);
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
   line-height: 1.7;
 }
 
 /* ============================================
-   Responsive Breakpoints
+   Responsive
    ============================================ */
 
 @media (max-width: 768px) {
   .section {
-    padding: 4.5rem 0 3rem;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
+    padding-block: clamp(3rem, 6vw, 5rem);
   }
 
   .section-heading {
     margin-bottom: 2rem;
-  }
-
-  .section-description {
-    font-size: 0.95rem;
   }
 }
 
