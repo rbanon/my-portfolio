@@ -3,9 +3,12 @@
 
     <!-- Header -->
     <header class="cv__header">
-      <div class="cv__header-main">
-        <h1 class="cv__name">Rafael Bañón Martín</h1>
-        <p class="cv__role">Software Developer — Frontend</p>
+      <div class="cv__header-left">
+        <img class="cv__photo" src="foto.png" alt="Rafael Bañón Martín" />
+        <div class="cv__header-main">
+          <h1 class="cv__name">Rafael Bañón Martín</h1>
+          <p class="cv__role">Software Developer — Frontend</p>
+        </div>
       </div>
       <div class="cv__contact">
         <a href="mailto:banonrafael@gmail.com">banonrafael&#64;gmail.com</a>
@@ -19,13 +22,13 @@
 
     <!-- Profile -->
     <section class="cv__section">
-      <h2 class="cv__section-title">Profile</h2>
+      <h2 class="cv__section-title">{{ 'cv.sections.profile' | transloco }}</h2>
       <p class="cv__profile">{{ profile() }}</p>
     </section>
 
     <!-- Experience -->
     <section class="cv__section">
-      <h2 class="cv__section-title">Experience</h2>
+      <h2 class="cv__section-title">{{ 'cv.sections.experience' | transloco }}</h2>
       @for (job of experiences(); track job.key) {
         <div class="cv__job">
           <div class="cv__job-header">
@@ -47,7 +50,7 @@
 
     <!-- Skills -->
     <section class="cv__section">
-      <h2 class="cv__section-title">Skills</h2>
+      <h2 class="cv__section-title">{{ 'cv.sections.skills' | transloco }}</h2>
       <div class="cv__skills">
         @for (cat of skillCategories; track cat.key) {
           <div class="cv__skill-row">
@@ -60,7 +63,7 @@
 
     <!-- Projects -->
     <section class="cv__section">
-      <h2 class="cv__section-title">Projects</h2>
+      <h2 class="cv__section-title">{{ 'cv.sections.projects' | transloco }}</h2>
       @for (project of realProjects; track project.key) {
         <div class="cv__project">
           <div class="cv__project-header">
@@ -77,7 +80,7 @@
 
     <!-- Certifications -->
     <section class="cv__section">
-      <h2 class="cv__section-title">Certifications</h2>
+      <h2 class="cv__section-title">{{ 'cv.sections.certifications' | transloco }}</h2>
       @for (cert of certifications; track cert.title) {
         <div class="cv__cert">
           <span class="cv__cert-title">{{ cert.title }}</span>
@@ -88,7 +91,7 @@
 
     <!-- Languages -->
     <section class="cv__section">
-      <h2 class="cv__section-title">Languages</h2>
+      <h2 class="cv__section-title">{{ 'cv.sections.languages' | transloco }}</h2>
       @for (lang of languages; track lang.name) {
         <div class="cv__lang">
           <span class="cv__lang-name">{{ lang.name }}</span>

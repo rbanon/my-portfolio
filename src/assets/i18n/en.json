@@ -119,6 +119,16 @@
       "location": { "label": "Location", "title": "Valencia, Spain",        "description": "Based in Valencia and available for remote-friendly opportunities." }
     }
   },
+  "cv": {
+    "sections": {
+      "profile": "Profile",
+      "experience": "Experience",
+      "skills": "Skills",
+      "projects": "Projects",
+      "certifications": "Certifications",
+      "languages": "Languages"
+    }
+  },
   "footer": {
     "built": "Built with Angular and TypeScript",
     "rights": "All rights reserved."

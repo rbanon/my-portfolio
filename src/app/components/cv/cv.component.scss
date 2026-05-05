@@ -13,15 +13,36 @@
 }
 
 @media print {
-  .cv-wrapper {
-    display: block;
-  }
+  // ---- Design tokens ----
+
+  $ink:    #111;
+  $soft:   #333;
+  $body:   #444;
+  $muted:  #555;
+  $dim:    #666;
+  $faint:  #777;
+  $sep:    #888;
+  $accent: #0969da;
+  $rule:   #ddd;
+  $divider:#ccc;
+
+  $fs-label: 8pt;
+  $fs-meta:  8.5pt;
+  $fs-body:  9pt;
+  $fs-sub:   9.5pt;
+  $fs-base:  10pt;
+  $fs-role:  11pt;
+  $fs-name:  20pt;
+
+  // ---- Base ----
+
+  .cv-wrapper { display: block; }
 
   .cv {
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 10pt;
+    font-size: $fs-base;
     line-height: 1.5;
-    color: #111;
+    color: $ink;
     background: #fff;
     padding: 0;
     margin: 0;
@@ -32,22 +53,35 @@
   .cv__header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 1.5rem;
     margin-bottom: 0.75rem;
   }
 
+  .cv__header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .cv__photo {
+    width: 3.5rem;
+    border-radius: 15%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
   .cv__name {
-    font-size: 20pt;
+    font-size: $fs-name;
     font-weight: 700;
     margin: 0 0 0.15rem;
-    color: #111;
+    color: $ink;
     line-height: 1.1;
   }
 
   .cv__role {
-    font-size: 11pt;
-    color: #444;
+    font-size: $fs-role;
+    color: $body;
     margin: 0;
     font-weight: 400;
   }
@@ -57,25 +91,19 @@
     display: flex;
     flex-direction: column;
     gap: 0.15rem;
-    font-size: 8.5pt;
-    color: #444;
+    font-size: $fs-meta;
+    color: $body;
     flex-shrink: 0;
 
-    a {
-      color: #0969da;
-      text-decoration: none;
-    }
-
-    span {
-      color: #555;
-    }
+    a    { color: $accent; text-decoration: none; }
+    span { color: $muted; }
   }
 
   // ---- Divider ----
 
   .cv__divider {
     border: none;
-    border-top: 1.5px solid #ccc;
+    border-top: 1.5px solid $divider;
     margin: 0.5rem 0 1rem;
   }
 
@@ -87,12 +115,12 @@
   }
 
   .cv__section-title {
-    font-size: 8pt;
+    font-size: $fs-label;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #555;
-    border-bottom: 1px solid #ddd;
+    color: $muted;
+    border-bottom: 1px solid $rule;
     padding-bottom: 0.2rem;
     margin: 0 0 0.55rem;
   }
@@ -101,8 +129,8 @@
 
   .cv__profile {
     margin: 0;
-    font-size: 9.5pt;
-    color: #333;
+    font-size: $fs-sub;
+    color: $soft;
     line-height: 1.6;
   }
 
@@ -111,10 +139,7 @@
   .cv__job {
     margin-bottom: 0.85rem;
     page-break-inside: avoid;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    &:last-child { margin-bottom: 0; }
   }
 
   .cv__job-header {
@@ -125,27 +150,14 @@
     margin-bottom: 0.3rem;
   }
 
-  .cv__job-title {
-    font-size: 9.5pt;
-  }
-
-  .cv__job-role {
-    font-weight: 700;
-    color: #111;
-  }
-
-  .cv__job-sep {
-    color: #888;
-  }
-
-  .cv__job-company {
-    color: #0969da;
-    font-weight: 500;
-  }
+  .cv__job-title   { font-size: $fs-sub; }
+  .cv__job-role    { font-weight: 700; color: $ink; }
+  .cv__job-sep     { color: $sep; }
+  .cv__job-company { color: $accent; font-weight: 500; }
 
   .cv__job-period {
-    font-size: 8.5pt;
-    color: #666;
+    font-size: $fs-meta;
+    color: $dim;
     white-space: nowrap;
     flex-shrink: 0;
   }
@@ -161,15 +173,15 @@
     li {
       position: relative;
       padding-left: 1rem;
-      font-size: 9pt;
-      color: #444;
+      font-size: $fs-body;
+      color: $body;
       line-height: 1.5;
 
       &::before {
         content: '·';
         position: absolute;
         left: 0.25rem;
-        color: #0969da;
+        color: $accent;
         font-weight: 700;
       }
     }
@@ -186,32 +198,27 @@
   .cv__skill-row {
     display: flex;
     gap: 0.5rem;
-    font-size: 9pt;
+    font-size: $fs-body;
     line-height: 1.4;
     align-items: baseline;
   }
 
   .cv__skill-category {
     font-weight: 700;
-    color: #111;
+    color: $ink;
     white-space: nowrap;
     min-width: 11rem;
     flex-shrink: 0;
   }
 
-  .cv__skill-tags {
-    color: #444;
-  }
+  .cv__skill-tags { color: $body; }
 
   // ---- Projects ----
 
   .cv__project {
     margin-bottom: 0.7rem;
     page-break-inside: avoid;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    &:last-child { margin-bottom: 0; }
   }
 
   .cv__project-header {
@@ -221,60 +228,27 @@
     margin-bottom: 0.15rem;
   }
 
-  .cv__project-name {
-    font-weight: 700;
-    font-size: 9.5pt;
-    color: #111;
-  }
+  .cv__project-name { font-weight: 700; font-size: $fs-sub; color: $ink; }
+  .cv__project-link { font-size: $fs-meta; color: $accent; text-decoration: none; }
+  .cv__project-desc { margin: 0 0 0.15rem; font-size: $fs-body; color: $body; line-height: 1.5; }
+  .cv__project-tech { margin: 0; font-size: $fs-meta; color: $faint; }
 
-  .cv__project-link {
-    font-size: 8.5pt;
-    color: #0969da;
-    text-decoration: none;
-  }
+  // ---- Certifications & Languages (shared structure) ----
 
-  .cv__project-desc {
-    margin: 0 0 0.15rem;
-    font-size: 9pt;
-    color: #444;
-    line-height: 1.5;
-  }
-
-  .cv__project-tech {
-    margin: 0;
-    font-size: 8.5pt;
-    color: #777;
-  }
-
-  // ---- Certifications ----
-
-  .cv__cert {
-    font-size: 9.5pt;
-    margin-bottom: 0.2rem;
-  }
-
-  .cv__cert-title {
-    font-weight: 600;
-    color: #111;
-  }
-
-  .cv__cert-issuer {
-    color: #555;
-  }
-
-  // ---- Languages ----
-
+  .cv__cert,
   .cv__lang {
-    font-size: 9.5pt;
+    font-size: $fs-sub;
     margin-bottom: 0.2rem;
   }
 
+  .cv__cert-title,
   .cv__lang-name {
     font-weight: 600;
-    color: #111;
+    color: $ink;
   }
 
+  .cv__cert-issuer,
   .cv__lang-level {
-    color: #555;
+    color: $muted;
   }
 }

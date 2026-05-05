@@ -119,6 +119,16 @@
       "location": { "label": "Ubicación", "title": "Valencia, España",       "description": "Con base en Valencia y disponible para oportunidades con trabajo remoto." }
     }
   },
+  "cv": {
+    "sections": {
+      "profile": "Perfil",
+      "experience": "Experiencia",
+      "skills": "Habilidades",
+      "projects": "Proyectos",
+      "certifications": "Certificaciones",
+      "languages": "Idiomas"
+    }
+  },
   "footer": {
     "built": "Construido con Angular y TypeScript",
     "rights": "Todos los derechos reservados."
