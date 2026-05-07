@@ -1,17 +1,58 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files
 
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
-
-# Node
+# dependencies
 /node_modules
-npm-debug.log
-yarn-error.log
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# IDEs and editors
+# build / compiled output
+/dist
+/dist-ssr
+/out-tsc
+/build
+/bazel-out
+/tmp
+
+# Angular
+/.angular/cache
+
+# testing
+/coverage
+
+# misc
+.DS_Store
+Thumbs.db
+*.pem
+*.local
+/connect.lock
+/libpeerconnection.log
+testem.log
+/typings
+/sass-cache
+__screenshots__/
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# editor / IDEs
 .idea/
 .project
 .classpath
@@ -19,31 +60,18 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
-
-# Visual Studio Code
+.history/*
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/mcp.json
-.history/*
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
-__screenshots__/
-
-# System files
-.DS_Store
-Thumbs.db
-.vercel
-.env*.local
-
-# Claude Code — configuración e instrucciones privadas
+# Claude / AI agent files
 .claude/
+CLAUDE.md
+AGENTS.md
+
+# Development docs (local only)
+/docs
