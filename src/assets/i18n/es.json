@@ -103,8 +103,9 @@
     "items": {
       "githubDashboard":    { "description": "Panel de análisis de GitHub en tiempo real construido con Vue 3 + TypeScript. Busca cualquier usuario para ver repositorios, lenguajes (gráfico donut), actividad reciente y estadísticas.", "type": "Open Source" },
       "portfolio":          { "description": "El portfolio que estás viendo. Angular + TypeScript con modo oscuro/claro, i18n EN/ES, scroll suave, diseño responsivo y animaciones modernas.", "type": "Personal" },
-      "linkedinAssistant":  { "description": "Generador de contenido para LinkedIn con IA, construido con React + TypeScript. Flujo de tres pasos: introduce el tema y tono, elige entre hooks generados por IA y selecciona la variante final del post. Los borradores se guardan en Supabase.", "type": "Personal" },
-      "grimoire":           { "description": "Creador de personajes de D&D 5e completo. Asistente paso a paso (identidad, clase, puntuaciones, competencias, equipo, hechizos), ficha de personaje en vivo, navegador de hechizos, navegador de objetos y seguimiento de campaña. Autenticación + guardado en la nube con Supabase.", "type": "Personal" },
+      "linkedinAssistant":  { "description": "Generador de contenido para LinkedIn con IA, construido con React + TypeScript. Flujo de tres pasos: introduce el tema y tono, elige entre hooks generados por IA y selecciona la variante final del post. Los borradores se guardan en Supabase.", "type": "Open Source" },
+      "grimoire":           { "description": "Creador de personajes de D&D 5e completo. Asistente paso a paso (identidad, clase, puntuaciones, competencias, equipo, hechizos), ficha de personaje en vivo, navegador de hechizos, navegador de objetos y seguimiento de campaña. Autenticación + guardado en la nube con Supabase.", "type": "Open Source" },
+      "evidenceAnonymizer": { "description": "Herramienta en el navegador para generar informes de historial de commits anonimizados desde GitHub, GitLab y Bitbucket. Reglas de anonimización configurables, layouts flexibles, exportación a PDF e i18n EN/ES. Todo corre en el cliente — ningún dato sale del navegador.", "type": "Open Source" },
       "comingSoon":         { "type": "En desarrollo" }
     }
   },
