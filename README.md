@@ -1,27 +1,105 @@
-# Rafael Bañón — Personal Portfolio
+# 🌐 My Portfolio
 
-A single-page application (SPA) built with Angular + TypeScript that serves as a personal portfolio for Rafael Bañón Martín, a frontend software developer based in Valencia, Spain.
+A modern **Single Page Application (SPA)** built with Angular + TypeScript that serves as the personal portfolio of Rafael Bañón Martín, a frontend software developer based in Valencia, Spain.
 
-## Features
+[![Built with Angular](https://img.shields.io/badge/built%20with-Angular%2021-DD0031?style=flat-square&logo=angular)]()
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript)]()
+[![SCSS](https://img.shields.io/badge/Styles-SCSS-CC6699?style=flat-square&logo=sass)]()
+[![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-000000?style=flat-square&logo=vercel)]()
 
-- **Dark/Light Theme** — Toggle between dark and light modes with localStorage persistence
-- **Internationalization (i18n)** — English and Spanish language support
-- **Responsive Design** — Mobile-first approach with smooth scroll
-- **Clean UI** — Minimal design inspired by GitHub's aesthetic
-- **Skeleton Loading** — Loading states for async content
-- **SPA Routing** — Client-side navigation with anchor links
+## ✨ Features
 
-## Tech Stack
+### 👤 About Me
+- Hero section with animated background
+- Bio and certifications
+- Work history timeline
 
-| Piece         | Technology                          |
-|---------------|-------------------------------------|
-| Framework     | Angular 21 + TypeScript             |
-| Styling       | SCSS/SASS with CSS custom properties|
-| Animations    | CSS transitions + keyframes         |
-| i18n          | Angular @angular/localize           |
-| Deployment    | Vercel                              |
+### 💡 Skills
+- Skills grid organized by category
+- Visual skill-level indicators
 
-## Project Structure
+### 🗂️ Projects
+- Project cards with skeleton loading states
+- Links to live demos and repositories
+
+### 📬 Contact
+- Contact details and social links
+- Direct link to GitHub and LinkedIn
+
+### 🌐 Internationalization (i18n)
+- **English and Spanish** versions
+- Built with Angular's `@angular/localize`
+- Language switching with localStorage persistence
+
+### 🎨 Light/Dark Theme
+- **Dark mode** by default (GitHub/Discord style)
+- **Light mode** with clean colors
+- Auto-detection of system theme
+- Header toggle with SVG icons
+
+## 🛠️ Tech Stack
+
+| Component | Technology | Why |
+|-----------|-----------|-----|
+| **Framework** | Angular 21 + TypeScript | Structured, production-ready |
+| **Styles** | SCSS + CSS custom properties | Flexible theming |
+| **Animations** | CSS transitions + keyframes | Smooth, performant |
+| **i18n** | Angular @angular/localize | Built-in multi-language support |
+| **Deployment** | Vercel | Zero-config CI/CD |
+
+## 📦 Installation
+
+### Requirements
+- Node.js 18+
+- npm 9+
+
+### Steps
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/rbanon/portfolio.git
+cd my-portfolio
+
+# 2. Install dependencies
+npm install
+
+# 3. Start development server (English)
+npm start
+
+# Open in browser
+# http://localhost:4200
+```
+
+## 🚀 Usage
+
+```bash
+# Development — English
+npm start
+
+# Development — Spanish
+npm run start:es
+
+# Build — English
+npm run build:en
+
+# Build — Spanish
+npm run build:es
+
+# Build — both versions
+npm run build:all
+```
+
+### Extracting Translations
+
+After adding new `i18n` attributes to templates:
+
+```bash
+npm run extract-i18n
+```
+
+This updates `src/i18n/messages.xlf`. Then translate new strings in `src/i18n/messages.es.xlf`.
+
+## 📁 Project Structure
 
 ```
 src/
@@ -35,7 +113,7 @@ src/
 │   │   ├── projects/    # Project cards with skeleton loading
 │   │   └── contact/     # Contact details and social links
 │   ├── services/
-│   │   ├── theme.service.ts      # Theme management
+│   │   ├── theme.service.ts     # Theme management
 │   │   └── language.service.ts  # Language management
 │   ├── app.ts
 │   ├── app.html
@@ -43,69 +121,31 @@ src/
 ├── i18n/
 │   ├── messages.xlf       # Extracted English strings
 │   └── messages.es.xlf    # Spanish translations
-├── styles/
-│   └── main.scss          # Global styles and theme variables
-└── main.ts
+└── styles/
+    └── main.scss           # Global styles and theme variables
 ```
 
-## Getting Started
+## 🎨 Themes
 
-### Prerequisites
-
-- Node.js 18+ 
-- npm 9+
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/rbanon/portfolio.git
-cd portfolio
-
-# Install dependencies
-npm install
+### Dark Mode (Default)
+```scss
+--bg-primary:     #0d1117
+--bg-secondary:   #161b22
+--text-primary:   #e6edf3
+--accent:         #58a6ff
 ```
 
-### Development
-
-```bash
-# Start development server (English)
-npm start
-
-# Start development server (Spanish)
-npm run start:es
+### Light Mode
+```scss
+--bg-primary:     #ffffff
+--bg-secondary:   #f6f8fa
+--text-primary:   #1f2328
+--accent:         #0969da
 ```
 
-The app will be available at `http://localhost:4200/`
+## 🌍 Deployment
 
-### Building
-
-```bash
-# Build English version
-npm run build:en
-
-# Build Spanish version
-npm run build:es
-
-# Build both versions
-npm run build:all
-```
-
-Build artifacts are output to `dist/my-portfolio/`
-
-### Extracting Translations
-
-After modifying templates with new `i18n` attributes:
-
-```bash
-npm run extract-i18n
-```
-
-This updates `src/i18n/messages.xlf` with new strings. Then translate them in `src/i18n/messages.es.xlf`.
-
-## Deployment
-
-### Vercel
+### Vercel (Recommended)
 
 The project is configured for Vercel deployment via `vercel.json`:
 
@@ -113,65 +153,35 @@ The project is configured for Vercel deployment via `vercel.json`:
 2. Vercel will automatically detect the configuration
 3. Deploy on push to main branch
 
-The build command creates both English and Spanish versions with proper SPA routing.
-
-### Manual Deployment
+Or deploy manually:
 
 ```bash
-# Build the project
-npm run build:all
+# Install Vercel CLI
+npm i -g vercel
 
-# Deploy the contents of dist/my-portfolio/
+# Deploy
+vercel
 ```
 
-## Theme System
+## 📝 License
 
-The theme system uses CSS custom properties defined in `src/styles.scss`:
+This project is under the MIT license. See [LICENSE](./LICENSE) for details.
 
-```scss
-:root.dark {
-  --bg-primary: #0d1117;
-  --bg-secondary: #161b22;
-  --text-primary: #e6edf3;
-  --accent: #58a6ff;
-  /* ... */
-}
+## 👨‍💻 Author
 
-:root.light {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f6f8fa;
-  --text-primary: #1f2328;
-  --accent: #0969da;
-  /* ... */
-}
-```
+Created by Rafael Bañón - Logo crateaad by Vecteezy
 
-Theme switching is handled by `ThemeService` which:
-- Detects system preference on first visit
-- Persists choice in localStorage
-- Toggles the `dark`/`light` class on the `<html>` element
+## 🐛 Issues & Support
 
-## Internationalization
+Found a bug? [Open an issue](../../issues/new)
 
-The i18n system uses Angular's built-in `@angular/localize`:
+## 🙏 Acknowledgments
 
-1. Add `i18n` attributes to translatable strings in templates
-2. Run `npm run extract-i18n` to extract strings
-3. Translate in `src/i18n/messages.es.xlf`
-4. Build with `--configuration=es` for Spanish version
+- [Angular](https://angular.dev/)
+- [Vercel](https://vercel.com/)
 
-Language switching is handled by `LanguageService` which:
-- Persists choice in localStorage
-- Redirects to the appropriate locale build
+---
 
-## License
+**⭐ If you like the project, don't forget to leave a star!**
 
-MIT
-
-## Author
-
-Rafael Bañón Martín
-
-- GitHub: [@rbanon](https://github.com/rbanon)
-- LinkedIn: [banonrafael](https://linkedin.com/in/banonrafael)
-- Email: banonrafael@gmail.com
+[Back to top ⬆️](#-my-portfolio)
