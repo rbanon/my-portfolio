@@ -26,6 +26,12 @@ export const PROJECTS_DATA: Project[] = [
     year: '2026',
   },
   {
+    key: 'devCommandPlaybook', name: 'Dev Command Playbook',
+    tech: ['Vue 3', 'TypeScript', 'Vite', 'SCSS', 'vue-i18n', 'TanStack Query', 'Vue Router', 'lucide-vue-next'],
+    github: 'https://github.com/rbanon/dev-command-playground',
+    year: '2026',
+  },
+  {
     key: 'portfolio', name: 'Personal Portfolio',
     tech: ['Angular', 'TypeScript', 'SCSS', '@angular/localize'],
     github: 'https://github.com/rbanon/portfolio',
