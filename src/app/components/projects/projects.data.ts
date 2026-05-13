@@ -29,6 +29,7 @@ export const PROJECTS_DATA: Project[] = [
     key: 'devCommandPlaybook', name: 'Dev Command Playbook',
     tech: ['Vue 3', 'TypeScript', 'Vite', 'SCSS', 'vue-i18n', 'TanStack Query', 'Vue Router', 'lucide-vue-next'],
     github: 'https://github.com/rbanon/dev-command-playground',
+    live:  'https://dev-command-playbook.vercel.app/',
     year: '2026',
   },
   {
