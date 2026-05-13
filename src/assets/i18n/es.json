@@ -106,6 +106,7 @@
       "linkedinAssistant":  { "description": "Generador de contenido para LinkedIn con IA, construido con React + TypeScript. Flujo de tres pasos: introduce el tema y tono, elige entre hooks generados por IA y selecciona la variante final del post. Los borradores se guardan en Supabase.", "type": "Open Source" },
       "grimoire":           { "description": "Creador de personajes de D&D 5e completo. Asistente paso a paso (identidad, clase, puntuaciones, competencias, equipo, hechizos), ficha de personaje en vivo, navegador de hechizos, navegador de objetos y seguimiento de campaña. Autenticación + guardado en la nube con Supabase.", "type": "Open Source" },
       "evidenceAnonymizer": { "description": "Herramienta en el navegador para generar informes de historial de commits anonimizados desde GitHub, GitLab y Bitbucket. Reglas de anonimización configurables, layouts flexibles, exportación a PDF e i18n EN/ES. Todo corre en el cliente — ningún dato sale del navegador.", "type": "Open Source" },
+      "devCommandPlaybook": { "description": "SPA para desarrolladores que permite buscar comandos rápidamente organizados por tecnología y caso de uso. Cubre distintas herramientas con búsqueda en tiempo real, filtros por categoría, vista tabla/tarjeta, copia con un clic e i18n EN/ES.", "type": "Open Source" },
       "comingSoon":         { "type": "En desarrollo" }
     }
   },
