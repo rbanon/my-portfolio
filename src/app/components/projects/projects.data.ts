@@ -35,7 +35,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     key: 'portfolio', name: 'Personal Portfolio',
     tech: ['Angular', 'TypeScript', 'SCSS', '@angular/localize'],
-    github: 'https://github.com/rbanon/portfolio',
+    github: 'https://github.com/rbanon/my-portfolio',
     live:   typeof window !== 'undefined' ? window.location.href : '',
     year: '2026',
   },
