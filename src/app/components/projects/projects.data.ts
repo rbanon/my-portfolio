@@ -42,7 +42,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     key: 'grimoire', name: 'Grimoire — DnD Creator',
     tech: ['Vue 3', 'TypeScript', 'Pinia', 'TanStack Query', 'Supabase', 'Zod', 'UnoCSS', 'Vite'],
-    github: 'https://github.com/rbanon/grimoirednd',
+    github: 'https://github.com/rbanon/grimoire-dnd',
     live:   'https://grimoirednd.vercel.app/',
     year: '2026',
   },
