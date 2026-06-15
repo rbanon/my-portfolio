@@ -15,7 +15,6 @@
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
-  min-height: 16rem;
   transition: transform 220ms ease-out, box-shadow 220ms ease-out;
 
   &:hover {
@@ -122,9 +121,6 @@
 
   &:hover { background-color: var(--color-primary-highlight); color: var(--color-primary); }
 
-  &--primary {
-    /* mismo estilo outline, sin fill */
-  }
 }
 
 .projects__coming-soon {
@@ -167,7 +163,7 @@
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-text-faint);
+  color: var(--color-text-muted);
 }
 
 @media (max-width: 768px) {

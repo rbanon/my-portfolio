@@ -39,10 +39,6 @@ export class ThemeService {
     this.theme.set(theme);
   }
 
-  getCurrentTheme(): 'dark' | 'light' {
-    return this.theme();
-  }
-
   toggleTheme(): void {
     this.setTheme(this.theme() === 'dark' ? 'light' : 'dark');
   }

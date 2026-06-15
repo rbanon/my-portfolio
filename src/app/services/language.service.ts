@@ -28,16 +28,8 @@ export class LanguageService {
     this.transloco.setActiveLang(initial);
   }
 
-  getCurrentLanguage(): Lang {
-    return this.transloco.getActiveLang() as Lang;
-  }
-
   setLanguage(lang: Lang): void {
     if (this.isBrowser) localStorage.setItem(this.LANG_KEY, lang);
     this.transloco.setActiveLang(lang);
-  }
-
-  getSupportedLanguages(): Lang[] {
-    return ['en', 'es'];
   }
 }

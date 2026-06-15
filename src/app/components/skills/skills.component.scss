@@ -18,15 +18,14 @@
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  transition: transform 220ms ease-out, box-shadow 220ms ease-out;
+  transition: border-color 220ms ease-out;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary-border);
   }
 
   &--primary {
-    border-color: rgba(201, 169, 110, 0.2);
+    border-color: var(--color-primary-border);
   }
 }
 
@@ -95,12 +94,12 @@
 
   &:hover {
     color: var(--color-text);
-    border-color: rgba(201, 169, 110, 0.3);
+    border-color: var(--color-primary-border-hover);
   }
 
   &--featured {
     color: var(--color-primary);
-    border-color: rgba(201, 169, 110, 0.3);
+    border-color: var(--color-primary-border-hover);
     background-color: var(--color-primary-highlight);
   }
 }
@@ -113,6 +112,5 @@
 
   .skills__category {
     padding: 1.25rem;
-    &:hover { transform: none; box-shadow: none; }
   }
 }

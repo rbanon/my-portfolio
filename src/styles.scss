@@ -1,5 +1,5 @@
 /* ============================================
-   Design System — DESIGN.md
+   Design System - DESIGN.md
    Concepto: Developer portfolio · calidez contenida · elegancia oscura
    ============================================ */
 
@@ -19,11 +19,13 @@
   --color-text-muted:      #8a8679;
   --color-text-faint:      #4a4843;
 
-  /* Acento — arena/trigo cálido */
+  /* Acento - arena/trigo calido */
   --color-primary:          #c9a96e;
   --color-primary-hover:    #b8934f;
   --color-primary-active:   #a07e3a;
-  --color-primary-highlight: rgba(201, 169, 110, 0.12);
+  --color-primary-highlight:    rgba(201, 169, 110, 0.12);
+  --color-primary-border:       rgba(201, 169, 110, 0.20);
+  --color-primary-border-hover: rgba(201, 169, 110, 0.30);
 
   /* Sombras tono-matched */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25);
@@ -43,17 +45,6 @@
 
   /* Nav */
   --nav-bg: rgba(17, 17, 16, 0.85);
-
-  /* Aliases para compat. con componentes */
-  --bg-primary:    var(--color-bg);
-  --bg-secondary:  var(--color-surface);
-  --bg-tertiary:   var(--color-surface-2);
-  --border-color:  var(--color-border);
-  --text-primary:  var(--color-text);
-  --text-secondary:var(--color-text-muted);
-  --accent:        var(--color-primary);
-  --accent-hover:  var(--color-primary-hover);
-  --shadow:        var(--shadow-md);
 }
 
 :root.light {
@@ -72,7 +63,9 @@
   --color-primary:          #8a6c3a;
   --color-primary-hover:    #7a5c2a;
   --color-primary-active:   #6a4c1a;
-  --color-primary-highlight: rgba(138, 108, 58, 0.10);
+  --color-primary-highlight:    rgba(138, 108, 58, 0.10);
+  --color-primary-border:       rgba(138, 108, 58, 0.20);
+  --color-primary-border-hover: rgba(138, 108, 58, 0.30);
 
   --shadow-sm: 0 1px 2px rgba(26, 20, 10, 0.07);
   --shadow-md: 0 4px 12px rgba(26, 20, 10, 0.09);
@@ -88,16 +81,6 @@
   --font-body:    'Satoshi', 'Inter', sans-serif;
 
   --nav-bg: rgba(245, 242, 236, 0.88);
-
-  --bg-primary:    var(--color-bg);
-  --bg-secondary:  var(--color-surface);
-  --bg-tertiary:   var(--color-surface-2);
-  --border-color:  var(--color-border);
-  --text-primary:  var(--color-text);
-  --text-secondary:var(--color-text-muted);
-  --accent:        var(--color-primary);
-  --accent-hover:  var(--color-primary-hover);
-  --shadow:        var(--shadow-md);
 }
 
 /* ============================================
@@ -181,7 +164,7 @@ a {
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-text-faint);
+  color: var(--color-text-muted);
 }
 
 .section-title {
@@ -216,7 +199,7 @@ a {
 }
 
 /* ============================================
-   Print — CV only
+   Print - CV only
    ============================================ */
 
 @media print {

@@ -9,7 +9,7 @@
   },
   "hero": {
     "title": "Rafael Bañón Martín",
-    "subtitle": "Software Developer — Frontend",
+    "subtitle": "Software Developer - Frontend",
     "tagline": "Building fast, clean and modern interfaces, improving product experiences and collaborating across the stack."
   },
   "about": {
@@ -40,11 +40,21 @@
     "title": "Experience",
     "desc": "4+ years of frontend experience in product development, system maintenance, API integrations and cross-functional technical work.",
     "jobs": {
+      "minsait": {
+        "role": "Software Developer",
+        "period": "Jun 2026 - Present",
+        "badge": "Current",
+        "summary": "Joining an ongoing legacy frontend project focused on codebase cleanup, security review and a progressive migration from AngularJS to Vue.",
+        "tasks": [
+          "Auditing legacy AngularJS codebase to identify and remove dead code, technical debt and security vulnerabilities",
+          "Contributing to the migration strategy and incremental transition from AngularJS to Vue"
+        ]
+      },
       "capgemini": {
         "role": "Software Developer",
-        "period": "Sep 2022 – Present",
-        "badge": "Current",
-        "summary": "Building and maintaining production frontend applications at scale — owning feature delivery, API integrations and performance optimization across multiple client projects.",
+        "period": "Sep 2022 - Jun 2026",
+        "badge": "2022 - 2026",
+        "summary": "Building and maintaining production frontend applications at scale, owning feature delivery, API integrations and performance optimization across multiple client projects.",
         "tasks": [
           "Architected REST API integration layers connecting SPAs to multiple backend services and third-party providers",
           "Drove frontend performance improvements across production applications, targeting load speed, render efficiency and Core Web Vitals",
@@ -56,7 +66,7 @@
       },
       "sagitaz": {
         "role": "Web Developer",
-        "period": "Feb 2022 – May 2022",
+        "period": "Feb 2022 - May 2022",
         "badge": "Earlier role",
         "summary": "Built full-stack web products in a Zoho-based environment, delivering automation tools and customer-facing features across frontend, backend and data layers.",
         "tasks": [
@@ -67,7 +77,7 @@
       },
       "audiovisual": {
         "role": "Audiovisual Technician",
-        "period": "Jan 2018 – Dec 2021",
+        "period": "Jan 2018 - Dec 2021",
         "badge": "Previous stage",
         "summary": "Operated in high-pressure live production environments requiring technical precision, fast problem-solving and close cross-team coordination.",
         "tasks": [
@@ -105,7 +115,7 @@
       "portfolio":          { "description": "This portfolio you're viewing. Angular + TypeScript with dark/light mode, EN/ES i18n, smooth scroll, responsive design and modern animations.", "type": "Personal" },
       "linkedinAssistant":  { "description": "AI-powered LinkedIn content generator built with React + TypeScript. Three-step flow: input topic and tone, pick from AI-generated hooks, then choose the final post variant. Drafts are stored in Supabase.", "type": "Open Source" },
       "grimoire":           { "description": "Full-featured D&D 5e character creator. Step-by-step wizard (identity, class, ability scores, proficiencies, equipment, spells), live character sheet, spell browser, item browser, and campaign tracker. Auth + cloud save via Supabase.", "type": "Work in Progress" },
-      "evidenceAnonymizer": { "description": "Browser-based tool to generate anonymized commit-history reports from GitHub, GitLab and Bitbucket. Configurable anonymization rules, flexible grouping layouts, PDF export and EN/ES i18n. Everything runs client-side — no data leaves the browser.", "type": "Open Source" },
+      "evidenceAnonymizer": { "description": "Browser-based tool to generate anonymized commit-history reports from GitHub, GitLab and Bitbucket. Configurable anonymization rules, flexible grouping layouts, PDF export and EN/ES i18n. Everything runs client-side: no data leaves the browser.", "type": "Open Source" },
       "devCommandPlaybook": { "description": "SPA for developers to quickly look up commands organized by technology and use case. Covers 13 tools (Git, Docker, Bash, SQL, Vue, Angular, Claude CLI…) with real-time search, category filters, dual table/card view, one-click copy, and EN/ES i18n.", "type": "Open Source" },
       "comingSoon":         { "type": "In progress" }
     }

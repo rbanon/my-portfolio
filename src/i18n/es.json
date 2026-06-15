@@ -15,7 +15,7 @@
   "experience": {
     "audiovisual": {
       "company": "Varios empleadores",
-      "period": "Ene 2018 – Dic 2021",
+      "period": "Ene 2018 - Dic 2021",
       "role": "Técnico Audiovisual",
       "tasks": [
         "Gestión técnica de señales de video/audio para streaming",
@@ -24,7 +24,7 @@
     },
     "capgemini": {
       "company": "Capgemini S.L.",
-      "period": "Sep 2022 – Actualidad",
+      "period": "Sep 2022 - Actualidad",
       "role": "Desarrollador de Software",
       "tasks": [
         "Integración de APIs RESTful y servicios de terceros en aplicaciones frontend",
@@ -38,7 +38,7 @@
     },
     "sagitaz": {
       "company": "Sagitaz Valencia",
-      "period": "Feb 2022 – May 2022",
+      "period": "Feb 2022 - May 2022",
       "role": "Desarrollador Web",
       "tasks": [
         "Desarrollo de aplicaciones web basadas en Zoho Suite",
@@ -51,7 +51,7 @@
   },
   "hero": {
     "getInTouch": "Contactar",
-    "subtitle": "Desarrollador de Software — Frontend",
+    "subtitle": "Desarrollador de Software - Frontend",
     "tagline": "Construyendo interfaces web rápidas, limpias y modernas.",
     "title": "Rafael Bañón Martín",
     "viewWork": "Ver mi trabajo"

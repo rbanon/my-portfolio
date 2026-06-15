@@ -7,7 +7,8 @@ export interface ExperienceItem {
 }
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
-  { key: 'capgemini',   company: 'Capgemini S.L.',      primary: true,  taskCount: 6 },
+  { key: 'minsait',     company: 'Minsait',             primary: true,    taskCount: 2 },
+  { key: 'capgemini',   company: 'Capgemini S.L.',      badgeMuted: true, taskCount: 6 },
   { key: 'sagitaz',     company: 'Sagitaz Valencia',    badgeMuted: true, taskCount: 3 },
   { key: 'audiovisual', company: 'Various employers',   badgeMuted: true, taskCount: 2 },
 ];

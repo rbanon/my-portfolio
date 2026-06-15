@@ -15,7 +15,7 @@
   "experience": {
     "audiovisual": {
       "company": "Various employers",
-      "period": "Jan 2018 – Dec 2021",
+      "period": "Jan 2018 - Dec 2021",
       "role": "Audiovisual Technician",
       "tasks": [
         "Technical management of video/audio signals for streaming",
@@ -24,7 +24,7 @@
     },
     "capgemini": {
       "company": "Capgemini S.L.",
-      "period": "Sep 2022 – Present",
+      "period": "Sep 2022 - Present",
       "role": "Software Developer",
       "tasks": [
         "RESTful API integration and third-party services in frontend apps",
@@ -38,7 +38,7 @@
     },
     "sagitaz": {
       "company": "Sagitaz Valencia",
-      "period": "Feb 2022 – May 2022",
+      "period": "Feb 2022 - May 2022",
       "role": "Web Developer",
       "tasks": [
         "Web application development based on Zoho Suite",
@@ -51,7 +51,7 @@
   },
   "hero": {
     "getInTouch": "Get in touch",
-    "subtitle": "Software Developer — Frontend",
+    "subtitle": "Software Developer - Frontend",
     "tagline": "Building fast, clean, and modern web interfaces.",
     "title": "Rafael Bañón Martín",
     "viewWork": "View my work"

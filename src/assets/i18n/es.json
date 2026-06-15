@@ -9,7 +9,7 @@
   },
   "hero": {
     "title": "Rafael Bañón Martín",
-    "subtitle": "Desarrollador de Software — Frontend",
+    "subtitle": "Desarrollador de Software - Frontend",
     "tagline": "Construyendo interfaces rápidas, limpias y modernas, mejorando experiencias de producto y colaborando en todo el stack."
   },
   "about": {
@@ -40,11 +40,21 @@
     "title": "Experiencia",
     "desc": "Más de 4 años de experiencia frontend en desarrollo de producto, mantenimiento de sistemas, integraciones de APIs y trabajo técnico multidisciplinar.",
     "jobs": {
+      "minsait": {
+        "role": "Desarrollador de Software",
+        "period": "Jun 2026 - Presente",
+        "badge": "Actual",
+        "summary": "Incorporacion a un proyecto frontend legacy con foco en limpieza de codigo, revision de seguridad y migracion progresiva de AngularJS a Vue.",
+        "tasks": [
+          "Auditoria de la base de codigo AngularJS legacy para identificar y eliminar codigo muerto, deuda tecnica y vulnerabilidades de seguridad",
+          "Contribucion a la estrategia de migracion y transicion incremental de AngularJS a Vue"
+        ]
+      },
       "capgemini": {
         "role": "Desarrollador de Software",
-        "period": "Sep 2022 – Presente",
-        "badge": "Actual",
-        "summary": "Desarrollo y mantenimiento de aplicaciones frontend en producción a escala — con responsabilidad en la entrega de features, integraciones de APIs y optimización del rendimiento en múltiples proyectos de cliente.",
+        "period": "Sep 2022 - Jun 2026",
+        "badge": "2022 - 2026",
+        "summary": "Desarrollo y mantenimiento de aplicaciones frontend en produccion a escala, con responsabilidad en la entrega de features, integraciones de APIs y optimizacion del rendimiento en multiples proyectos de cliente.",
         "tasks": [
           "Diseñé capas de integración de APIs REST conectando SPAs a múltiples servicios backend y proveedores externos",
           "Lideré mejoras de rendimiento frontend en aplicaciones en producción, con foco en velocidad de carga, eficiencia de renderizado y Core Web Vitals",
@@ -56,7 +66,7 @@
       },
       "sagitaz": {
         "role": "Desarrollador Web",
-        "period": "Feb 2022 – May 2022",
+        "period": "Feb 2022 - May 2022",
         "badge": "Cargo anterior",
         "summary": "Desarrollé productos web full-stack en un entorno basado en Zoho, entregando herramientas de automatización y funcionalidades orientadas al cliente en capas de frontend, backend y datos.",
         "tasks": [
@@ -67,7 +77,7 @@
       },
       "audiovisual": {
         "role": "Técnico Audiovisual",
-        "period": "Ene 2018 – Dic 2021",
+        "period": "Ene 2018 - Dic 2021",
         "badge": "Etapa anterior",
         "summary": "Trabajo en entornos de producción en directo de alta presión, con precisión técnica, resolución rápida de problemas y coordinación estrecha entre equipos.",
         "tasks": [
@@ -105,7 +115,7 @@
       "portfolio":          { "description": "El portfolio que estás viendo. Angular + TypeScript con modo oscuro/claro, i18n EN/ES, scroll suave, diseño responsivo y animaciones modernas.", "type": "Personal" },
       "linkedinAssistant":  { "description": "Generador de contenido para LinkedIn con IA, construido con React + TypeScript. Flujo de tres pasos: introduce el tema y tono, elige entre hooks generados por IA y selecciona la variante final del post. Los borradores se guardan en Supabase.", "type": "Open Source" },
       "grimoire":           { "description": "Creador de personajes de D&D 5e completo. Asistente paso a paso (identidad, clase, puntuaciones, competencias, equipo, hechizos), ficha de personaje en vivo, navegador de hechizos, navegador de objetos y seguimiento de campaña. Autenticación + guardado en la nube con Supabase.", "type": "En desarrollo" },
-      "evidenceAnonymizer": { "description": "Herramienta en el navegador para generar informes de historial de commits anonimizados desde GitHub, GitLab y Bitbucket. Reglas de anonimización configurables, layouts flexibles, exportación a PDF e i18n EN/ES. Todo corre en el cliente — ningún dato sale del navegador.", "type": "Open Source" },
+      "evidenceAnonymizer": { "description": "Herramienta en el navegador para generar informes de historial de commits anonimizados desde GitHub, GitLab y Bitbucket. Reglas de anonimización configurables, layouts flexibles, exportación a PDF e i18n EN/ES. Todo corre en el cliente: ningún dato sale del navegador.", "type": "Open Source" },
       "devCommandPlaybook": { "description": "SPA para desarrolladores que permite buscar comandos rápidamente organizados por tecnología y caso de uso. Cubre distintas herramientas con búsqueda en tiempo real, filtros por categoría, vista tabla/tarjeta, copia con un clic e i18n EN/ES.", "type": "Open Source" },
       "comingSoon":         { "type": "En desarrollo" }
     }

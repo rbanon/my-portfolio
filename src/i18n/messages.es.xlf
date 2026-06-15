@@ -75,8 +75,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="8926548309623090682" datatype="html">
-        <source>Software Developer — Frontend</source>
-        <target>Desarrollador de Software — Frontend</target>
+        <source>Software Developer - Frontend</source>
+        <target>Desarrollador de Software - Frontend</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/hero/hero.component.html</context>
           <context context-type="linenumber">24,25</context>
